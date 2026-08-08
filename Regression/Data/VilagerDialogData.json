@@ -1152,85 +1152,85 @@
 
   "Villager_Changeing_Dialoges": {
     "adult_male": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.adult_male.Change.Player.Accept.1}}",
         "2": "{{i18n:Villager_Dialoges.adult_male.Change.Player.Accept.2}}"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.adult_male.Change.Player.Refuse.1}}",
         "2": "{{i18n:Villager_Dialoges.adult_male.Change.Player.Refuse.2}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.adult_male.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.adult_male.Change.Player.2}}"
       }
     },
     "adult_female": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.adult_female.Change.Player.Accept.1}}",
         "2": "{{i18n:Villager_Dialoges.adult_female.Change.Player.Accept.2}}"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.adult_female.Change.Player.Refuse.1}}",
         "2": "{{i18n:Villager_Dialoges.adult_female.Change.Player.Refuse.2}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.adult_female.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.adult_female.Change.Player.2}}"
       }
     },
     "abigail": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Abigail.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"abigail\" \"joja diaper\" \"stinky pants\"#$h"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Abigail.Change.Player.Refuse.1}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.Abigail.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.Abigail.Change.Player.2}}"
       }
     },
     "emily": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Emily.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"emily\" \"cloth diaper\" \"self made <pants/skirt>\"#$h"
       },
-      "refuse": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.Emily.Change.Player.Refuse.1}}"
       }
     },
     "gus": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Gus.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"gus\" \"cloth diaper\"#$h"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Gus.Change.Player.Refuse.1}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.Gus.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.Gus.Change.Player.2}}"
       }
     },
     "haley": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Haley.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"haley\" \"heart diaper\"#$h"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Haley.Change.Player.Refuse.1}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.Haley.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.Haley.Change.Player.2}}"
       }
     },
     "jodi": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Jodi.Change.Player.Accept.1}}#[OnDebuffed: {{i18n:Jodi.Change_Diaper.Accept_Debuff.1}}]#$action DIAPER_CHANGE \"jodi\" \"baby print diaper\" \"sams old pants\"#$"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Jodi.Change.Player.Refuse.1}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.Jodi.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.Jodi.Change.Player.2}}",
         "3": "{{i18n:Villager_Dialoges.Jodi.Change.Player.3}}",
@@ -1238,13 +1238,13 @@
       }
     },
     "leah": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Leah.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"leah\" \"pawprint diaper\"#$h"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Leah.Change.Player.Refuse.1}}"
       },
-      "change": {
+      "player_get_change": {
         "1": "{{i18n:Villager_Dialoges.Leah.Change.Player.1}}",
         "2": "{{i18n:Villager_Dialoges.Leah.Change.Player.2}}",
         "3": "{{i18n:Villager_Dialoges.Leah.Change.Player.3}}",
@@ -1252,26 +1252,34 @@
       }
     },
     "maru": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Maru.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"maru\" \"joja diaper\"#$h"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Maru.Change.Player.Refuse.1}}"
       }
     },
     "penny": {
-      "accept": {
-        "1": "{{i18n:Villager_Dialoges.Penny.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"penny\" \"heart diaper\" \"second hand pants\"#$h"
+      "player_accept": {
+        "1": "{{i18n:Villager_Dialoges.Penny.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"penny\" \"heart diaper\" \"second hand pants\"#$h",
+        "2": "{{i18n:Villager_Dialoges.Penny.Change.Player.Accept.2}}#$action DIAPER_CHANGE \"penny\" \"heart diaper\" \"second hand pants\"#$h",
+        "3": "{{i18n:Villager_Dialoges.Penny.Change.Player.Accept.3}}#$action DIAPER_CHANGE \"penny\" \"heart diaper\" \"second hand pants\"#$h"
       },
-      "refuse": {
-        "1": "{{i18n:Villager_Dialoges.Penny.Change.Player.Refuse.1}}"
+      "player_refuse": {
+        "1": "{{i18n:Villager_Dialoges.Penny.Change.Player.Refuse.1}}",
+        "2": "{{i18n:Villager_Dialoges.Penny.Change.Player.Refuse.2}}",
+        "3": "{{i18n:Villager_Dialoges.Penny.Change.Player.Refuse.3}}"
+      },
+      "player_get_change": {
+        "1": "{{i18n:Villager_Dialoges.Penny.Change.Player.1}}",
+        "2": "{{i18n:Villager_Dialoges.Penny.Change.Player.2}}"
       }
     },
     "sam": {
-      "accept": {
+      "player_accept": {
         "1": "{{i18n:Villager_Dialoges.Sam.Change.Player.Accept.1}}#$action DIAPER_CHANGE \"sam\" \"baby print diaper\" \"sams old pants\"#$h"
       },
-      "refuse": {
+      "player_refuse": {
         "1": "{{i18n:Villager_Dialoges.Sam.Change.Player.Refuse.1}}"
       }
     }

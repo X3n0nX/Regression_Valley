@@ -261,8 +261,8 @@
 
         // Diaperchange from Abigail
 
-        "Diaper_Change_Accept": "$GET_CHANGE_ACCEPT_DIALOG$ \"abigail\"",
-        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"abigail\"",
+        "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"abigail\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"abigail\"",
         "Diaper_Change_Followup": "{{i18n:Abigail.Diaper_Change.Followup}}"
       }
     },

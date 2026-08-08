@@ -73,8 +73,8 @@
         "Change_Diaper_Refuse": "{{i18n:Penny.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Penny.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Penny.Change_Diaper.Refuse_UsedBad}}]",
         "Change_Diaper_Followup": "...",
 
-        "Diaper_Change_Accept": "$GET_CHANGE_ACCEPT_DIALOG$ \"penny\"",
-        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"penny\"",
+        "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"penny\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"penny\"",
         "Diaper_Change_Followup": "{{i18n:Penny.Diaper_Change.Followup}}"
       },
 		},

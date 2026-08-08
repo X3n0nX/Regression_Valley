@@ -110,10 +110,10 @@ namespace RegressionMod
                 str = ReplaceChangedByNpc(str, c);
                 str = ReplaceGetChangeDialogAccept(str, c);
                 str = ReplaceGetChangeDialogRefuse(str, c);
-                str = ReplaceChangedByNpc(str, c);
-                str = ReplaceUnderwearToken(str,c);
-                str = ReplaceUnderwearToken(str, c,oldNew: OldNew.New);
+                str = ReplaceUnderwearToken(str, c);
+                str = ReplaceUnderwearToken(str, c, oldNew: OldNew.New);
                 str = ReplaceInspectUnderwearToken(str, c);
+                str = ReplaceInspectUnderwearToken(str, c, oldNew: OldNew.New);
 
                 str = ReplaceOr(str,!c.plural,"#");
             }
@@ -122,7 +122,7 @@ namespace RegressionMod
             {
                 str = ReplaceConditionalOptional(str, "OnDebuffed", b.HasWetOrMessyDebuff());
 
-                str = ReplacePantsToken(str,b.pants);
+                str = ReplacePantsToken(str,b.pants, oldNew: OldNew.New);
                 str = str.Replace("$BEDDING_DRYTIME$", Game1.getTimeOfDayString(b.bed.timeWhenDoneDrying.time));
             }
 
@@ -142,7 +142,7 @@ namespace RegressionMod
                 var changeOtherDialog = RandString(changeData.Change_Other_Dialog);
                 changeOtherDialog = ReplaceAndOr(changeOtherDialog, c.wetness > 0, c.messiness > 0);
                 changeOtherDialog += npcUnderwearOptions(b);
-                str = str.Replace(StringConstants.Token.ChangeOutherDialog, changeOtherDialog);
+                str = str.Replace(StringConstants.Token.ChangeOtherDialog, changeOtherDialog);
 
                 str = ReplaceAndOr(str, c.wetness > 0, c.messiness > 0);
 
@@ -153,6 +153,7 @@ namespace RegressionMod
                 str = ReplaceUnderwearToken(str, c, npc: true);
                 str = ReplaceUnderwearToken(str, c, npc: true,oldNew: OldNew.New);
                 str = ReplaceInspectUnderwearToken(str, c, npc: true);
+                str = ReplaceInspectUnderwearToken(str, c, npc: true, oldNew: OldNew.New);
 
                 str = ReplaceOr(str, !c.plural, "#");
             }
@@ -163,7 +164,7 @@ namespace RegressionMod
                 if (pants != null)
                 {
                     str = ReplaceNpcName(str, b.Name.ToLower());
-                    str = ReplacePantsToken(str, pants, true);
+                    str = ReplacePantsToken(str, pants, true, oldNew: OldNew.New);
                     str = ReplaceGenderTextNpc(str, b.Gender);
                 }
                 else Regression.monitor.Log($"NPC Error: {b.Name}", LogLevel.Info);
@@ -251,9 +252,11 @@ namespace RegressionMod
         }
 
         // possible tokens:
-        //      $UNDERWEAR_PREFIX$              Players new underwear prefix
+        //      $UNDERWEAR_PREFIX$              Players actual weared underwear prefix
+        //      $NEW_UNDERWEAR_PREFIX$          Players new underwear prefix
         //      $OLD_UNDERWEAR_PREFIX$          Players old underwear prefix
-        //      $NPC_UNDERWEAR_PREFIX$          NPCs new underwear prefix
+        //      $NPC_UNDERWEAR_PREFIX$          NPCs actual weared underwear prefix
+        //      $NPC_NEW_UNDERWEAR_PREFIX$      NPCs new underwear prefix
         //      $NPC_OLD_UNDERWEAR_PREFIX$      NPCs old underwear prefix
         private static string ReplaceUnderwearPrefix(string str, bool plural = false, bool npc = false, OldNew oldNew = OldNew.None)
         {
@@ -269,9 +272,11 @@ namespace RegressionMod
         }
 
         // possible tokens:
-        //      $UNDERWEAR_NAME$                Players new underwear name
+        //      $UNDERWEAR_NAME$                Players actual weared underwear name
+        //      $NEW_UNDERWEAR_NAME$            Players new underwear name
         //      $OLD_UNDERWEAR_NAME$            Players old underwear name
-        //      $NPC_UNDERWEAR_NAME$            NPCs new underwear name
+        //      $NPC_UNDERWEAR_NAME$            NPCs actual weared underwear name
+        //      $NPC_NEW_UNDERWEAR_NAME$        NPCs new underwear name
         //      $NPC_OLD_UNDERWEAR_NAME$        NPCs old underwear name
         private static string ReplaceUnderwearName(string str, string underwearName, bool npc = false, OldNew oldNew = OldNew.None)
         {
@@ -287,9 +292,11 @@ namespace RegressionMod
         }
 
         // possible tokens:
-        //      $UNDERWEAR_DESC$                Description of the players new underwear
+        //      $UNDERWEAR_DESC$                Description of the players actual weared underwear
+        //      $NEW_UNDERWEAR_DESC$            Description of the players new underwear
         //      $OLD_UNDERWEAR_DESC$            Description of the players old underwear
-        //      $NPC_UNDERWEAR_DESC$            Description of the npcs new underwear
+        //      $NPC_UNDERWEAR_DESC$            Description of the npcs actual weared underwear
+        //      $NPC_NEW_UNDERWEAR_DESC$        Description of the npcs new underwear
         //      $NPC_OLD_UNDERWEAR_DESC$        Description of the npcs old underwear
         private static string ReplaceUnderwearDesc(string str, string description, bool npc = false, OldNew oldNew = OldNew.None)
         {
@@ -304,31 +311,36 @@ namespace RegressionMod
             return str.Replace(token, description);
         }
 
-        public static string ReplaceInspectUnderwearToken(string str, Container underwear, bool npc = false, bool old = false)
+        public static string ReplaceInspectUnderwearToken(string str, Container underwear, bool npc = false, OldNew oldNew = OldNew.None)
         {
-            str = ReplaceInspectUnderwearName(str,underwear,npc: npc, old: old);
-            str = ReplaceInspectUnderwearName(str, underwear, npc: npc, noPrefix: true, old: old);
-            str = ReplaceInspectUnderwearDesc(str, underwear, npc: npc, old: old);
+            str = ReplaceInspectUnderwearName(str,underwear,npc: npc, oldNew: oldNew);
+            str = ReplaceInspectUnderwearName(str, underwear, npc: npc, noPrefix: true, oldNew: oldNew);
+            str = ReplaceInspectUnderwearDesc(str, underwear, npc: npc, oldNew: oldNew);
 
             return str;
         }
 
         // possible tokens:
-        //      $INSPECT_UNDERWEAR_NAME$                        State and name of the players new underwear
-        //      $INSPECT_UNDERWEAR_NAME_NO_PREFIX$              State and name of the players new underwear without prefix
+        //      $INSPECT_UNDERWEAR_NAME$                        State and name of the players actual weared underwear
+        //      $INSPECT_UNDERWEAR_NAME_NO_PREFIX$              State and name of the players actual weared underwear without prefix
+        //      $INSPECT_NEW_UNDERWEAR_NAME$                    State and name of the players new underwear
+        //      $INSPECT_NEW_UNDERWEAR_NAME_NO_PREFIX$          State and name of the players new underwear without prefix
         //      $INSPECT_OLD_UNDERWEAR_NAME$                    State and name of the players old underwear
         //      $INSPECT_OLD_UNDERWEAR_NAME_NO_PREFIX$          State and name of the players old underwear without prefix
-        //      $NPC_INSPECT_UNDERWEAR_NAME$                    State and name of the npcs new underwear
-        //      $NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$          State and name of the npcs new underwear without prefix
+        //      $NPC_INSPECT_UNDERWEAR_NAME$                    State and name of the npcs actual weared underwear
+        //      $NPC_INSPECT_UNDERWEAR_NAME_NO_PREFIX$          State and name of the npcs nactual weared underwear without prefix
+        //      $NPC_INSPECT_NEW_UNDERWEAR_NAME$                State and name of the npcs new underwear
+        //      $NPC_INSPECT_NEW_UNDERWEAR_NAME_NO_PREFIX$      State and name of the npcs new underwear without prefix
         //      $NPC_INSPECT_OLD_UNDERWEAR_NAME$                State and name of the npcs old underwear
         //      $NPC_INSPECT_OLD_UNDERWEAR_NAME_NO_PREFIX$      State and name of the npcs old underwear without prefix
-        private static string ReplaceInspectUnderwearName(string str, Container underwear, bool noPrefix = false, bool npc = false, bool old = false)
+        private static string ReplaceInspectUnderwearName(string str, Container underwear, bool noPrefix = false, bool npc = false, OldNew oldNew = OldNew.None)
         {
             string token = "UNDERWEAR_NAME";
             string tokenPre = "INSPECT_";
 
             if (noPrefix) token = token + "_NO_PREFIX";
-            if (old) token = "OLD_" + token;
+            if (oldNew == OldNew.Old) token = "OLD_" + token;
+            if (oldNew == OldNew.New) token = "NEW_" + token;
             token = tokenPre + token;
             if (npc) token = "NPC_" + token;
 
@@ -338,16 +350,19 @@ namespace RegressionMod
         }
 
         // possible tokens:
-        //      $INSPECT_UNDERWEAR_DESC$            Description of the players new underwear
+        //      $INSPECT_UNDERWEAR_DESC$            Description of the players actual weared underwear
+        //      $INSPECT_NEW_UNDERWEAR_DESC$        Description of the players new underwear
         //      $INSPECT_OLD_UNDERWEAR_DESC$        Description of the players old underwear
-        //      $NPC_INSPECT_UNDERWEAR_DESC$        Description of the npcs new underwear
+        //      $NPC_INSPECT_UNDERWEAR_DESC$        Description of the npcs actual weared underwear
+        //      $NPC_INSPECT_NEW_UNDERWEAR_DESC$    Description of the npcs new underwear
         //      $NPC_INSPECT_OLD_UNDERWEAR_DESC$    Description of the npcs old underwear
-        private static string ReplaceInspectUnderwearDesc(string str, Container underwear, bool npc = false, bool old = false)
+        private static string ReplaceInspectUnderwearDesc(string str, Container underwear, bool npc = false, OldNew oldNew = OldNew.None)
         {
             string token = "UNDERWEAR_DESC";
             string tokenPre = "INSPECT_";
 
-            if (old) token = "OLD_" + token;
+            if (oldNew == OldNew.Old) token = "OLD_" + token;
+            if (oldNew == OldNew.New) token = "NEW_" + token;
             token = tokenPre + token;
             if (npc) token = "NPC_" + token;
 
@@ -358,25 +373,28 @@ namespace RegressionMod
         #endregion
 
         #region Replace Token Pants
-        public static string ReplacePantsToken(string str, Container pants, bool npc = false, bool old = false)
+        public static string ReplacePantsToken(string str, Container pants, bool npc = false, OldNew oldNew = OldNew.None)
         {
-            str = ReplacePantsPrefix(str, pants.plural, npc, old: old);
-            str = ReplacePantsName(str, pants.displayName, npc, old: old);
-            str = ReplacePantsDesc(str, pants.description, npc, old: old);
+            str = ReplacePantsPrefix(str, pants.plural, npc, oldNew: oldNew);
+            str = ReplacePantsName(str, pants.displayName, npc, oldNew: oldNew);
+            str = ReplacePantsDesc(str, pants.description, npc, oldNew: oldNew);
 
             return str;
         }
 
         // possible tokens:
-        //      $PANTS_PREFIX$              Players new pants prefix
-        //      $OLD_PANTS_PREFIX$          Players old pants prefix
-        //      $NPC_PANTS_PREFIX$          NPCs new pants prefix
-        //      $NPC_OLD_PANTS_PREFIX$      NPCs old pants prefix
-        private static string ReplacePantsPrefix(string str, bool plural = false, bool npc = false, bool old = false)
+        //      $PANTS_PREFIX$              Prefix of the players actual weared pants
+        //      $NEW_PANTS_PREFIX$          Prefix of the players new pants
+        //      $OLD_PANTS_PREFIX$          Prefix of the players old pants
+        //      $NPC_PANTS_PREFIX$          Prefix of the npsc actual weared pants
+        //      $NPC_NEW_PANTS_PREFIX$      Prefix of the npsc new pants
+        //      $NPC_OLD_PANTS_PREFIX$      Prefix of the npsc old pants
+        private static string ReplacePantsPrefix(string str, bool plural = false, bool npc = false, OldNew oldNew = OldNew.None)
         {
             string token = "PANTS_PREFIX";
 
-            if (old) token = "OLD_" + token;
+            if (oldNew == OldNew.Old) token = "OLD_" + token;
+            if (oldNew == OldNew.New) token = "NEW_" + token;
             if (npc) token = "NPC_" + token;
 
             token = "$" + token + "$";
@@ -385,15 +403,18 @@ namespace RegressionMod
         }
 
         // possible tokens:
-        //      $PANTS_NAME$                Players new pants name
-        //      $OLD_PANTS_NAME$            Players old pants name
-        //      $NPC_PANTS_NAME$            NPCs new pants name
-        //      $NPC_OLD_PANTS_NAME$        NPCs old pants name
-        private static string ReplacePantsName(string str, string pantsName, bool npc = false, bool old = false)
+        //      $PANTS_NAME$                Name of the players actual weared pants
+        //      $NEW_PANTS_NAME$            Name of the players new pants
+        //      $OLD_PANTS_NAME$            Name of the players old pants
+        //      $NPC_PANTS_NAME$            Name of the npsc actual weared pants
+        //      $NPC_NEW_PANTS_NAME$        Name of the npcs new pants
+        //      $NPC_OLD_PANTS_NAME$        Name of the npcs old pants
+        private static string ReplacePantsName(string str, string pantsName, bool npc = false, OldNew oldNew = OldNew.None)
         {
             string token = "PANTS_NAME";
 
-            if (old) token = "OLD_" + token;
+            if (oldNew == OldNew.Old) token = "OLD_" + token;
+            if (oldNew == OldNew.New) token = "NEW_" + token;
             if (npc) token = "NPC_" + token;
 
             token = "$" + token + "$";
@@ -402,15 +423,18 @@ namespace RegressionMod
         }
 
         // possible tokens:
-        //      $PANTS_DESC$                Players new pants description
-        //      $OLD_PANTS_DESC$            Players old pants description
-        //      $NPC_PANTS_DESC$            NPCs new pants description
-        //      $NPC_OLD_PANTS_DESC$        NPCs old pants description
-        private static string ReplacePantsDesc(string str, string description, bool npc = false, bool old = false)
+        //      $PANTS_DESC$                Description of the players actual weared pants
+        //      $NEW_PANTS_DESC$            Description of the players new pants
+        //      $OLD_PANTS_DESC$            Description of the players old pants
+        //      $NPC_PANTS_DESC$            Description of the npcs actual weared pants
+        //      $NPC_NEW_PANTS_DESC$        Description of the npcs new pants
+        //      $NPC_OLD_PANTS_DESC$        Description of the npcs old pants
+        private static string ReplacePantsDesc(string str, string description, bool npc = false, OldNew oldNew = OldNew.None)
         {
             string token = "PANTS_DESC";
 
-            if (old) token = "OLD_" + token;
+            if (oldNew == OldNew.Old) token = "OLD_" + token;
+            if (oldNew == OldNew.New) token = "NEW_" + token;
             if (npc) token = "NPC_" + token;
 
             token = "$" + token + "$";
@@ -520,7 +544,7 @@ namespace RegressionMod
             return str;
         }
 
-        // format string: $GET_CHANGE_ACCEPT_DIALOG$ \"npcName\" \"id\"
+        // format string: $GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"npcName\" \"id\"
         // parameter 1: name of the npc which changing offer you accept
         // parameter 2: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file VillagerData.json
         //              if free try to randomize the id
@@ -540,7 +564,7 @@ namespace RegressionMod
 
             if (parameters.Length >= 1)
             {
-                npcName = parameters[0];
+                npcName = parameters[0].ToLower();
 
                 if (parameters.Length >= 2)
                 {
@@ -555,7 +579,7 @@ namespace RegressionMod
             }
             else throw new Exception($"Wrong Count of Parameters set for Token {token}");
 
-            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, "accept", id);
+            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, "player_accept", id);
 
             acceptChangingByNpc = tryGetI18nText(acceptChangingByNpc);
 
@@ -568,7 +592,7 @@ namespace RegressionMod
             return str;
         }
 
-        // format string: $GET_CHANGE_REFUSE_DIALOG$ \"npcName\" \"id\"
+        // format string: $GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"npcName\" \"id\"
         // parameter 1: name of the npc which changing offer you refuse
         // parameter 2: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file VillagerData.json
         //              if free try to randomize the id
@@ -588,7 +612,7 @@ namespace RegressionMod
 
             if (parameters.Length >= 1)
             {
-                npcName = parameters[0];
+                npcName = parameters[0].ToLower();
 
                 if (parameters.Length >= 2)
                 {
@@ -603,7 +627,7 @@ namespace RegressionMod
             }
             else throw new Exception($"Wrong Count of Parameters set for Token {token}");
 
-            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, "refuse", id);
+            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, "player_refuse", id);
 
             acceptChangingByNpc = tryGetI18nText(acceptChangingByNpc);
 
@@ -616,7 +640,7 @@ namespace RegressionMod
             return str;
         }
 
-        public static string GetVilagerChangingDialogByKey(string npcName, string key = "change", int id = -1)
+        private static string GetVilagerChangingDialogByKey(string npcName, string key = "player_get_change", int id = -1)
         {
             Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
 
@@ -649,7 +673,7 @@ namespace RegressionMod
             }
         }
 
-        public static string GetGenderChangingDialog(bool isFemale, string key = "change")
+        public static string GetGenderChangingDialog(bool isFemale, string key = "player_get_change")
         {
             Dictionary<int, string> changingDialoges = new Dictionary<int, string>();
 
@@ -681,6 +705,55 @@ namespace RegressionMod
                 }
                 else throw new Exception($"Key {keyGender} or Key {key} not found in Villager_Changeing_Dialoges");
             }
+        }
+
+        // format string: $GET_CHANGE_NPC_ACCEPT_DIALOG$ \"npcName\" \"underwearName\" \"id\"
+        // parameter 1: name of the npc which you offer a changing
+        // parameter 2: name of new underwear you want to change the npc
+        // parameter 3: (optional) id of the npc´s dialogue in "Villager_Changeing_Reactions" in file VillagerData.json
+        //              if free try to randomize the id
+        //              if no insert in "Villager_Changeing_Reactions" use gender specific dialogue
+        public static string ReplaceChangeNpcDialogAccept(string str)
+        {
+            string token = StringConstants.Token.GetChangeAcceptDialog;
+
+            if (!str.Contains(token)) return str;
+
+            string npcName = "";
+            string underwearName = "";
+            int id = -1;
+
+            string[] parameters;
+
+            str = GetParameters(str, token, out parameters);
+
+            if (parameters.Length >= 2)
+            {
+                npcName = parameters[0].ToLower();
+                underwearName = parameters[1];
+
+                if (parameters.Length >= 3)
+                {
+                    if (!int.TryParse(parameters[1], out id))
+                    {
+                        id = -1;
+                        throw new Exception("Parameter for id is not an int for Token " + token);
+                    }
+                }
+
+                if (!NpcHelper.IsValidNpc(npcName)) throw new Exception($"Parameter for npcName is not an valid npc: {npcName}");
+            }
+            else throw new Exception($"Wrong Count of Parameters set for Token {token}");
+
+            string acceptChangingByNpc = GetVilagerChangingDialogByKey(npcName, underwearName, id);
+
+            acceptChangingByNpc = tryGetI18nText(acceptChangingByNpc);
+
+            acceptChangingByNpc = "#$b#" + acceptChangingByNpc;
+
+            str = str.Replace(token, acceptChangingByNpc);
+
+            return str;
         }
 
         public static string GetParameters(string str,string token, out string[] parameters)

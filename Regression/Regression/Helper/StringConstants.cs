@@ -17,9 +17,9 @@ namespace RegressionMod
             public const string UnderwearDesc = "$UNDERWEAR_DESC$";
 
             public const string GettingChangedDialog = "$GETTING_CHANGED_DIALOG$";
-            public const string ChangeOutherDialog = "$CHANGE_OTHER_DIALOG$";
-            public const string GetChangeAcceptDialog = "$GET_CHANGE_ACCEPT_DIALOG$";
-            public const string GetChangeRefuseDialog = "$GET_CHANGE_REFUSE_DIALOG$";
+            public const string ChangeOtherDialog = "$CHANGE_OTHER_DIALOG$";
+            public const string GetChangeAcceptDialog = "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$";
+            public const string GetChangeRefuseDialog = "$GET_CHANGE_PLAYER_REFUSE_DIALOG$";
 
             public const string ChangedByNpc = "$CHANGED_BY_NPC$";
         }

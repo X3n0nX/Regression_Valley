@@ -70,8 +70,8 @@
         "Change_Diaper_Accept_Joja": "{{i18n:Sam.Change_Diaper.Accept_Joja}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"joja diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_Joja_Post}}",
         "Change_Diaper_Accept_HeartDiaper": "{{i18n:Sam.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"heart diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_HeartDiaper_Post}}",
 
-        "Diaper_Change_Accept": "#$GET_CHANGE_ACCEPT_DIALOG$ \"sam\"",
-        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"sam\"",
+        "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"sam\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"sam\"",
         "Diaper_Change_Followup": "{{i18n:Sam.Diaper_Change.Followup}}"
       }
 		},

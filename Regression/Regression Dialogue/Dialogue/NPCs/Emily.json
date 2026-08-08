@@ -120,8 +120,8 @@
         // Diaperchange from Emily
         //########################################
 
-        "Diaper_Change_Accept": "$GET_CHANGE_ACCEPT_DIALOG$ \"emily\"",
-        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"emily\"",
+        "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"emily\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"emily\"",
         "Diaper_Change_Followup": "{{i18n:Emily.Diaper_Change.Followup}}"
       }
     },

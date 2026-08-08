@@ -596,7 +596,7 @@ namespace RegressionMod
 
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null,oldNew: Strings.OldNew.New);
-            msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, old: true);
+            msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, Strings.OldNew.Old);
 
             Dialoges.Say(msg, this);
         }
@@ -620,9 +620,9 @@ namespace RegressionMod
 
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null);
             msg = Strings.ReplaceUnderwearToken(msg, uwNew.container, npc: npcName != null, oldNew: Strings.OldNew.New);
-            msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, old: true);
-            msg = Strings.ReplacePantsToken(msg, pantsNew, npc: npcName != null);
-            msg = Strings.ReplacePantsToken(msg, pantsOld, npc: npcName != null, true);
+            msg = Strings.ReplaceInspectUnderwearToken(msg, uwOld.container, npc: npcName != null, Strings.OldNew.Old);
+            msg = Strings.ReplacePantsToken(msg, pantsNew, npc: npcName != null, Strings.OldNew.New);
+            msg = Strings.ReplacePantsToken(msg, pantsOld, npc: npcName != null, Strings.OldNew.Old);
 
             Dialoges.Say(msg, this);
         }

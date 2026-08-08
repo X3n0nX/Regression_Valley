@@ -61,8 +61,9 @@
         "Show_Diaper": "{{i18n:Jodi.Dialogue.Show_Diaper}}",
         "Show_Followup": "#$p jodi_show_nice#{{i18n:Jodi.Dialogue.Show_Followup}}",
 
-        "Diaper_Change_Accept": "$GET_CHANGE_ACCEPT_DIALOG$ \"jodi\"",
-        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"jodi\"",
+
+        "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"jodi\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"jodi\"",
         "Diaper_Change_Followup": "{{i18n:Jodi.Change_Diaper.Followup}}"
       }
 		}

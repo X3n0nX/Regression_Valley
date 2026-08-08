@@ -12,8 +12,8 @@
         "Mon2": "{{i18n:Gus.Dialogue.Mon2}}}",
         "Sat4": "{{i18n:Gus.Dialogue.Sat4}}}",
 
-        "Diaper_Change_Accept": "$GET_CHANGE_ACCEPT_DIALOG$ \"gus\"",
-        "Diaper_Change_Refuse": "$GET_CHANGE_REFUSE_DIALOG$ \"gus\"",
+        "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"gus\"",
+        "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"gus\"",
         "Diaper_Change_Followup": "{{i18n:Gus.Change_Diaper.Followup}}"
       }
 		}
