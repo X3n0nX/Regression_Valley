@@ -37,7 +37,8 @@ namespace RegressionMod
 
         public static Farmer who;
         //public static string dirtyEventToken = "dirtyEventToken";
-        public static string generalEventToken = "generalEventToken";
+        public static string checkNpcEventToken = "checkNpcEventToken";
+        public static string checkPlayerEventToken = "checkPlayerEventToken";
         public static bool SelfIsFurry = false;
         public static bool WorldIsFurry = false;
         const float timeInTick = (1f / 43f); //One second realtime ~= 1/43 hours in game
@@ -541,127 +542,168 @@ namespace RegressionMod
             {
                 //body.HandleTime(timeInTick); to handle this cleaner, we move this to the time-changing tick
 
-
                 // The following block makes npc (usually) not talk to you if you wear wet or messy pants... short of the special texts
                 var hasMessyPants = body.pants.used;
 
-                foreach (var npc in NpcHelper.GetNpcsByRange(10))
-                {
-                    if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(generalEventToken);
-                    //if (npc.CurrentDialogue.Count > 0) npc.RemoveDialogue(dirtyEventToken);
+                bool keyAskCheckNpcPressed = help.Input.GetState(config.KeyAskCheckNpc).IsDown();
+                bool keyAskCheckPlayerPressed = help.Input.GetState(config.KeyAskCheckPlayer).IsDown();
 
-                    if (npc.Age == 2 && !ChildrenAndDiapers) continue;
+                NpcBody npcBody = NpcHelper.GetNpcInFront();
 
-                    int heartLevelForNpc = who.getFriendshipHeartLevelForNPC(npc.npc.getName());
-
-                    string responseKey = Animations.responseKeyAdditionForState(npc.npc);
-                    string randQuestionNpcString = "";
-                    string randNpcString = "";
-                    bool hasOptionVeryNice = false;
-                    bool hasOptionNice = false;
-                    bool optionVeryNice = false;
-                    bool optionNice = false;
-                    bool hasOptionDirty = false;
-                    bool dirtyChange = false;
-
-                    if (responseKey == "check_player" || hasMessyPants)
+                // check if actually a button for asking npc is pressed
+                if (help.Input.GetState(SButton.LeftShift).IsDown() && (keyAskCheckNpcPressed || keyAskCheckPlayerPressed))
+                {              
+                    if (npcBody != null)
                     {
-                        string responseKeyQuestion = "general_question_change";
-                        randQuestionNpcString = Strings.RandString(npc.GetVillagerReactions(responseKeyQuestion).ToArray());
-                        randQuestionNpcString = randQuestionNpcString + "#$b#";
-
-                        hasOptionVeryNice = npc.ChangingOptions.hasOptionGiveChangeVeryNice;
-                        hasOptionNice = npc.ChangingOptions.hasOptionGiveChangeNice;
-
-                        optionVeryNice = hasOptionVeryNice ? npc.canGivePlayerChangeVeryNice : false;
-                        optionNice = hasOptionNice ? npc.canGivePlayerChangeNice : false;
-
-                        if (hasMessyPants)
+                        if((npcBody.Age == 2 && ChildrenAndDiapers) || npcBody.Age != 2)
                         {
-                            hasOptionDirty = npc.ChangingOptions.hasOptionGiveDirtyChange;
-                            dirtyChange = hasOptionDirty ? npc.canGivePlayerChangeDirty : false;
+                            int heartLevelForNpc = who.getFriendshipHeartLevelForNPC(npcBody.npc.getName());
+
+                            string eventToken = "";
+                            string responseKey = "";
+                            string randQuestionNpcString = "";
+                            string randNpcString = "";
+                            bool hasOptionVeryNice = false;
+                            bool hasOptionNice = false;
+                            bool optionVeryNice = false;
+                            bool optionNice = false;
+                            bool hasOptionDirty = false;
+                            bool dirtyChange = false;
+
+                            if (keyAskCheckNpcPressed)
+                            {
+                                if(npcBody.npc.CurrentDialogue.Count > 0)
+                                {
+                                    npcBody.RemoveDialogue(checkNpcEventToken);
+                                    npcBody.RemoveDialogue(checkPlayerEventToken);
+                                }
+
+                                eventToken = checkNpcEventToken;
+                                responseKey = "check_npc";
+                                hasOptionVeryNice = npcBody.ChangingOptions.hasOptionGetChangeVeryNice;
+                                hasOptionNice = npcBody.ChangingOptions.hasOptionGetChangeNice;
+
+                                optionVeryNice = hasOptionVeryNice ? npcBody.canGetChangedByPlayerVeryNice : false;
+                                optionNice = hasOptionNice ? npcBody.canGetChangedByPlayerNice : false;
+                            }
+                            else if (keyAskCheckPlayerPressed)
+                            {
+                                if (npcBody.npc.CurrentDialogue.Count > 0)
+                                {
+                                    npcBody.RemoveDialogue(checkNpcEventToken);
+                                    npcBody.RemoveDialogue(checkPlayerEventToken);
+                                }
+
+                                eventToken = checkPlayerEventToken;
+                                responseKey = "check_player";
+                                string responseKeyQuestion = "general_question_change";
+                                randQuestionNpcString = Strings.RandString(npcBody.GetVillagerReactions(responseKeyQuestion).ToArray());
+                                randQuestionNpcString = randQuestionNpcString + "#$b#";
+
+                                hasOptionVeryNice = npcBody.ChangingOptions.hasOptionGiveChangeVeryNice;
+                                hasOptionNice = npcBody.ChangingOptions.hasOptionGiveChangeNice;
+
+                                optionVeryNice = hasOptionVeryNice ? npcBody.canGivePlayerChangeVeryNice : false;
+                                optionNice = hasOptionNice ? npcBody.canGivePlayerChangeNice : false;
+
+                                if (hasMessyPants)
+                                {
+                                    hasOptionDirty = npcBody.ChangingOptions.hasOptionGiveDirtyChange;
+                                    dirtyChange = hasOptionDirty ? npcBody.canGivePlayerChangeDirty : false;
+                                }
+                            }
+
+                            if(responseKey != "" && eventToken != "")
+                            {
+                                // get dialoge based on change options and friendship
+                                // check if we have no messy pants or we have messy pants but no option for change dirty were found
+                                if (hasMessyPants && !hasOptionDirty || !hasMessyPants)
+                                {
+
+                                    // get modificator for dialoge 
+                                    string mod = "_mean";
+
+                                    if ((hasOptionVeryNice && optionVeryNice) ||
+                                        (!hasOptionVeryNice && heartLevelForNpc >= 8) ||
+                                        config.FriendshipDebugVeryNice)
+                                    {
+                                        mod = "_verynice";
+                                    }
+                                    else if (!hasOptionVeryNice && heartLevelForNpc >= 6 &&
+                                        !config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
+                                    {
+                                        var niceRand = rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
+                                        if (niceRand <= 0.1f)
+                                            mod = "_verynice";
+                                        else
+                                            mod = "_nice";
+                                    }
+                                    else if ((hasOptionNice && optionNice) ||
+                                        (!hasOptionNice && heartLevelForNpc >= 4) ||
+                                        (config.FriendshipDebugNice && !config.FriendshipDebugVeryNice))
+                                    {
+                                        mod = "_nice";
+                                    }
+
+                                    responseKey = responseKey + mod;
+                                    randNpcString = Strings.RandString(npcBody.GetVillagerReactions(responseKey).ToArray());
+
+                                    if (randNpcString != "")
+                                    {
+                                        randNpcString = randQuestionNpcString + randNpcString;
+                                    }
+                                }
+                                else
+                                {
+                                    responseKey = "check_player_dirty";
+
+                                    if (dirtyChange)
+                                    {
+                                        randNpcString = Strings.RandString(npcBody.GetVillagerReactions(responseKey).ToArray());
+                                    }
+                                }
+
+                                if(randNpcString != "")
+                                {
+                                    string npcStatement = Strings.ReplaceAndOr(randNpcString, body.underwear.wetness > 0, body.underwear.messiness > 0);
+                                    npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
+
+                                    // checking for query token in the dialoge and adding # for the answer options
+                                    // this is nessesary because the game will not show the dialoge correctly if the query is used in the dialoge
+                                    string token = "$query";
+
+                                    if (npcStatement.Contains(token))
+                                    {
+                                        int i = npcStatement.IndexOf(token);
+                                        string[] arr = npcStatement.Split(token)[1]?.Split('|');
+
+                                        // get index of '|' Separator to insert '#'
+                                        i = i + arr[0].Length + token.Length + 1;
+
+                                        int amount = npcStatement.Split("#$b#").Length - 1;
+
+                                        npcStatement = npcStatement.Insert(i, new string('#', amount * 2));
+                                    }
+
+                                    npcBody.npc.setNewDialogue(new Dialogue(npcBody.npc, eventToken, npcStatement), true, true);
+                                }
+                            }
                         }
                     }
-                    else if (responseKey == "check_npc")
-                    {
-                        hasOptionVeryNice = npc.ChangingOptions.hasOptionGetChangeVeryNice;
-                        hasOptionNice = npc.ChangingOptions.hasOptionGetChangeNice;
-
-                        optionVeryNice = hasOptionVeryNice ? npc.canGetChangedByPlayerVeryNice : false;
-                        optionNice = hasOptionNice ? npc.canGetChangedByPlayerNice : false;
-                    }
-
-                    // get dialoge based on change options and friendship
-                    // check if we have no messy pants or we have messy pants but no option for change dirty were found
-                    if (hasMessyPants && !hasOptionDirty || !hasMessyPants)
-                    {
-
-                        // get modificator for dialoge 
-                        string mod = "_mean";
-
-                        if ((hasOptionVeryNice && optionVeryNice) ||
-                            (!hasOptionVeryNice && heartLevelForNpc >= 8) ||
-                            config.FriendshipDebugVeryNice)
-                        {
-                            mod = "_verynice";
-                        }
-                        else if (!hasOptionVeryNice && heartLevelForNpc >= 6 && 
-                            !config.FriendshipDebugNice && !config.FriendshipDebugVeryNice)
-                        {
-                            var niceRand = rnd.NextDouble(); //allows a small chance for the very_nice line to be chosen instead for variety.
-                            if (niceRand <= 0.1f)
-                                mod = "_verynice";
-                            else
-                                mod = "_nice";
-                        }
-                        else if ((hasOptionNice && optionNice) ||
-                            (!hasOptionNice && heartLevelForNpc >= 4) ||
-                            (config.FriendshipDebugNice && !config.FriendshipDebugVeryNice))
-                        {
-                            mod = "_nice";
-                        }
-
-                        responseKey = responseKey + mod;
-                        randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
-
-                        if (randNpcString == "") continue;
-
-                        randNpcString = randQuestionNpcString + randNpcString;
-                    }
-                    else
-                    {
-                        responseKey = "check_player_dirty";
-
-                        if (dirtyChange)
-                        {
-                            randNpcString = Strings.RandString(npc.GetVillagerReactions(responseKey).ToArray());
-                        }
-
-                        if (randNpcString == "") continue;
-                    }
-
-                    string npcStatement = Strings.ReplaceAndOr(randNpcString, body.underwear.wetness > 0, body.underwear.messiness > 0);
-                    npcStatement = Strings.InsertVariables(npcStatement, body, (Container)null);
-
-                    // checking for query token in the dialoge and adding # for the answer options
-                    // this is nessesary because the game will not show the dialoge correctly if the query is used in the dialoge
-                    string token = "$query";
-
-                    if (npcStatement.Contains(token))
-                    {
-                        int i = npcStatement.IndexOf(token);
-                        string[] arr = npcStatement.Split(token)[1]?.Split('|');
-
-                        // get index of '|' Separator to insert '#'
-                        i = i + arr[0].Length + token.Length + 1;
-
-                        int amount = npcStatement.Split("#$b#").Length - 1;
-
-                        npcStatement = npcStatement.Insert(i, new string('#', amount * 2));
-                    }
-
-                    npc.npc.setNewDialogue(new Dialogue(npc.npc, generalEventToken, npcStatement), true, true);
                 }
+
+                // check if no npc is in front 
+                if (npcBody == null)
+                {
+                    foreach (var npc in NpcHelper.GetNpcsByRange(10))
+                    {
+                        if (npc.CurrentDialogue.Count > 0)
+                        {
+                            npc.RemoveDialogue(checkNpcEventToken);
+                            npc.RemoveDialogue(checkPlayerEventToken);
+                        }
+                    }
+                }          
             }
         }
 

@@ -138,6 +138,16 @@
   "Config_Menu.Key_Bindings.Check_Potty_Feeling.Name": "Check Potty Feeling",
   "Config_Menu.Key_Bindings.Check_Potty_Feeling.Tooltip": "The key you want to press to check if you need to go to toilet. (KeyCheckPottyFeeling)",
 
+  // Ask Npc to Check Npc Underwear
+
+  "Config_Menu.Key_Bindings.Ask_Check_Npc.Name": "Ask npc for check there underwear",
+  "Config_Menu.Key_Bindings.Ask_Check_Npc.Tooltip": "The key you want to press to ask a npc to check there underwear. (KeyAskCheckNpc)",
+
+  // Ask Npc to Check Players Underwear
+
+  "Config_Menu.Key_Bindings.Ask_Check_Player.Name": "Ask npc for check players underwear",
+  "Config_Menu.Key_Bindings.Ask_Check_Player.Tooltip": "The key you want to press to ask a npc to check the players underwear. (KeyAskCheckPlayer)",
+
   // Toggle Debug
 
   "Config_Menu.Key_Bindings.Toggle_Debug.Name": "Toggle Debug Mode",

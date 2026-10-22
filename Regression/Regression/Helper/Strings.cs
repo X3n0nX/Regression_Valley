@@ -1,4 +1,5 @@
-﻿using StardewModdingAPI;
+﻿using Microsoft.Xna.Framework.Input;
+using StardewModdingAPI;
 using StardewValley;
 using StardewValley.GameData.Characters;
 using System;
@@ -88,11 +89,39 @@ namespace RegressionMod
             {
                 if (!UnderwearHelper.HasUnderwear(key)) continue;
                 var entry = foundDict[key];
+
+                // check if npc has dialog key for underwear option
+                if (!NpcHasDialogKey(npc, entry["dialog_key"]) || entry["dialog_key"] == null)
+                {
+                    Regression.monitor.Log($"NPC '{npc.Name}' has no dialog '{entry["dialog_key"]}', option '{key}' is skipped.", LogLevel.Warn);
+                    continue;
+                }
+
                 // #$r change_other_yes 2 Change_Diaper_Accept#Yes
                 list.Add($"#$r change_other_yes {entry["friendship"]} {entry["dialog_key"]} {(entry.TryGetValue("observerfriendship", out string val) ? val : "")}#{key.FirstCharToUpper()}");
             }
+
+            // check if npc has dialog key for refuse option
+            if (!NpcHasDialogKey(npc, "Change_Diaper_Refuse"))
+            {
+                Regression.monitor.Log($"NPC '{npc.Name}' has no dialog 'Change_Diaper_Refuse', changing request is canceled.", LogLevel.Warn);
+                return "";
+            }
+
             list.Add($"#$r change_other_no 0 Change_Diaper_Refuse#" + Regression.help.Translation.Get("Change_Other.Dialog.Answer_No"));
             return string.Join("#", list);
+        }
+
+        public static bool NpcHasDialogKey(NPC npc, string key)
+        {
+            try
+            {
+                return npc?.Dialogue != null && npc.Dialogue.ContainsKey(key);
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public static string InsertVariables(string msg, Body b, Container c = null)

@@ -1122,23 +1122,55 @@
       ],
       // You check them
       "check_npc_verynice": [
-        "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok}}|$CHANGE_OTHER_DIALOG$"
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.Check.1}}$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Npc.Clean.1}}|$CHANGE_OTHER_DIALOG$",
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.2}}#$b#{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.Check.1}}$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Npc.Clean.1}}|$CHANGE_OTHER_DIALOG$",
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.Check.1}}$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Npc.Clean.2}}|$CHANGE_OTHER_DIALOG$",
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.2}}#$b#{{i18n:Villager_Reactions.Penny.Check.Npc.Verynice.Check.1}}$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Npc.Clean.2}}|$CHANGE_OTHER_DIALOG$"
       ],
       "check_npc_nice": [
-        ""
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Nice.1}}",
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Nice.2}}"
       ],
       "check_npc_mean": [
-        ""
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Mean.1}}",
+        "{{i18n:Villager_Reactions.Penny.Check.Npc.Mean.2}}"
       ],
       // They check you
       "check_player_verynice": [
-        "{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre}}#$b#$query !DIAPER_USED#{{i18n:Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok}}|$GETTING_CHANGED_DIALOG$ \"penny\""
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.1}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.2}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.1}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.2}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.2}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.2}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.1}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.3}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.2}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.4}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.1}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.5}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.2}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.3}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.1}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.5}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.1}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Clean.2}}|{{i18n:Villager_Reactions.Penny.Check.Player.Verynice.Used.1}}$GETTING_CHANGED_DIALOG$ \"penny\""
       ],
       "check_player_nice": [
-        ""
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Clean.1}}|$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.2}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.2}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Used.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.3}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.3}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Clean.1}}|$GETTING_CHANGED_DIALOG$ \"penny\"",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.4}}#$b#{{Villager_Reactions.Penny.Check.Player.Nice.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.4}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Used.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.5}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.5}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.2}}#$b#$query !DIAPER_USED \"penny\"#{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Clean.1}}|{{i18n:Villager_Reactions.Penny.Check.Player.Nice.Used.1}}"
       ],
       "check_player_mean": [
-        ""
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.1}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.2}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.2}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.2}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.2}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.3}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.3}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.2}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.4}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.4}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.2}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.5}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.1}}",
+        "{{i18n:Villager_Reactions.Penny.Change.Player.General_Question.5}}#$b#{{i18n:Villager_Reactions.Penny.Check.Player.Mean.2}}"
       ],
       "check_player_dirty": [
         "{{i18n:Villager_Reactions.Penny.Change.Dirty_Offer.1}}$GETTING_CHANGED_DIALOG$ \"penny\""

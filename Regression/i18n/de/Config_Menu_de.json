@@ -133,6 +133,16 @@
   "Config_Menu.Key_Bindings.Check_Potty_Feeling.Name": "Prüfe Töpchengefühl",
   "Config_Menu.Key_Bindings.Check_Potty_Feeling.Tooltip": "Die Taste, die du drücken möchtest, um zu prüfen, ob du auf die Toilette musst. (KeyCheckPottyFeeling)",
 
+  // Ask Npc to Check Npc Underwear
+
+  "Config_Menu.Key_Bindings.Ask_Check_Npc.Name": "Frage Npc ob du seine Unterwäsche prüfen sollst",
+  "Config_Menu.Key_Bindings.Ask_Check_Npc.Tooltip": "Die Taste, die du drücken möchtest, um einen Npc zu fragen, ob du seine Unterwäsche kontrollieren sollst. (KeyAskCheckNpc)",
+
+  // Ask Npc to Check Players Underwear
+
+  "Config_Menu.Key_Bindings.Ask_Check_Player.Name": "Frage Npc ob er deine Unterwäsche prüfen kann",
+  "Config_Menu.Key_Bindings.Ask_Check_Player.Tooltip": "Die Taste, die du drücken möchtest, um einen Npc zu fragen, ob er deine Unterwäsche kontrollieren kann. (KeyAskCheckPlayer)",
+
   // Toggle Debug
 
   "Config_Menu.Key_Bindings.Toggle_Debug.Name": "Debug Modus umschalten",

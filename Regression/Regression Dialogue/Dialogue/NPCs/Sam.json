@@ -69,6 +69,9 @@
         "Change_Diaper_Accept_BigKids": "{{i18n:Sam.Change_Diaper.Accept_BigKids}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"big kid undies\"#$b#{{i18n:Sam.Change_Diaper.Accept_BigKids_Post}}",
         "Change_Diaper_Accept_Joja": "{{i18n:Sam.Change_Diaper.Accept_Joja}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"joja diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_Joja_Post}}",
         "Change_Diaper_Accept_HeartDiaper": "{{i18n:Sam.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"sam\" \"heart diaper\"#$b#{{i18n:Sam.Change_Diaper.Accept_HeartDiaper_Post}}",
+        "Change_Diaper_Refuse": "{{i18n:Sam.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Sam.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Sam.Change_Diaper.Refuse_UsedBad}}]",
+        "Change_Diaper_Followup": "{{i18n:Sam.Change_Diaper.Followup}}",
+
 
         "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"sam\"",
         "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"sam\"",

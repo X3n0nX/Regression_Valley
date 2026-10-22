@@ -2,6 +2,7 @@
 using StardewValley.Characters;
 using StardewValley;
 using System.Collections.Generic;
+using System;
 
 namespace RegressionMod
 {
@@ -125,6 +126,38 @@ namespace RegressionMod
             }
             return list;
         }
+
+        public static NpcBody GetNpcInFront()
+        {
+            // Tile in front of the player, based on the facing direction
+            Vector2 frontTile = _player.GetGrabTile();
+            Rectangle frontRect = new Rectangle(
+                (int)frontTile.X * Game1.tileSize,
+                (int)frontTile.Y * Game1.tileSize,
+                Game1.tileSize,
+                Game1.tileSize);
+
+            NPC npc = null;
+
+            foreach (NPC n in Game1.currentLocation.characters)
+            {
+                if (n == null || n is Horse || n is Pet || !n.IsVillager) continue;
+
+                // Exact tile match first, otherwise the NPC's bounding box overlaps the tile (NPC is walking between tiles)
+                if (n.Tile == frontTile)
+                {
+                    npc = n;
+                    break;
+                }
+                if (npc == null && n.GetBoundingBox().Intersects(frontRect))
+                {
+                    npc = n;
+                }
+            }
+
+            return npc == null ? null : new NpcBody(npc);
+        }
+
         public static bool NpcInRange(Vector2 actualPosition, GameLocation location, string name, int range = 10)
         {
             name = name.ToLower();
@@ -135,6 +168,10 @@ namespace RegressionMod
 
             return false;
         }
+
+        /// <summary>
+        /// Check if a specific npc is in range of an other npc.
+        /// </summary>
         public static bool NpcInRange(NPC npcRequester, string name, int range = 10)
         {
             name = name.ToLower();
@@ -145,6 +182,10 @@ namespace RegressionMod
 
             return false;
         }
+
+        /// <summary>
+        /// Check if a specific npc is at an specific location.
+        /// </summary>
         public static bool NpcAtLocation(NPC npcRequester, string location)
         {
             location = location.ToLower();

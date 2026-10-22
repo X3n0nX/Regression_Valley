@@ -108,7 +108,7 @@
   "Villager_Reactions.Haley.Check.Player.Verynice.Clean.1": "%Haley looks disappoint as she finds your $UNDERWEAR_NAME$ clean and huffs.#$b#Thats a shame... as gross as changes are, I just bought these cute pink diapers I thought would look great on you.$2#$b#Come on, push something out so I can see how they look on you!$1#$b#%Haley pats your bottom playfully.",
 
   "Villager_Reactions.Haley.Check.Player.Verynice.Used.1": "%Haley claps her hands together excitedly as she finds you <wet&messy> and squeals happily.#$b#Eee..! I was hoping you'd need a change! Come on, come on! I've been dying to make you try on these cute diapers i've found!$3",
-  "Villager_Reactions.Haley.Check.Player.Verynice.Used.2": "Haley looks uncomfortable for a moment before bursting out into laughter and agreeing.$1#$b#All right! All right! Ugh, you know I can say no to you when you do your pleading puppy dog look...$11#$b#Come on lets get you into something clean and crinkly.$13",
+  "Villager_Reactions.Haley.Check.Player.Verynice.Used.2": "%Haley looks uncomfortable for a moment before bursting out into laughter and agreeing.$1#$b#All right! All right! Ugh, you know I can say no to you when you do your pleading puppy dog look...$11#$b#Come on lets get you into something clean and crinkly.$13",
 
   // Haley check your underwear friendship nice
 
@@ -131,9 +131,9 @@
   // Villager Changeing Dialoges
   // ########################################
 
-  "Villager_Dialoges.Sam.Change.Player.Accept.1": "%Haley changes you with a bit of an uncomfortable look on her face, but despite her discomfort she actually does a good job and admires her handy work#$b#There, try to make it to the potty next time, okay dork? As cute as your butt is I still think changing is a little icky...$1",
+  "Villager_Dialoges.Haley.Change.Player.Accept.1": "%Haley changes you with a bit of an uncomfortable look on her face, but despite her discomfort she actually does a good job and admires her handy work#$b#There, try to make it to the potty next time, okay dork? As cute as your butt is I still think changing is a little icky...$1",
 
-  "Villager_Dialoges.Penny.Change.Player.Refuse.1": "%Haley rolls her eyes at you and scoffs.#$b#Really? You actually want to stay in your <wet&messy> diaper? Well don't come crying to me when you get a rash$3",
+  "Villager_Dialoges.Haley.Change.Player.Refuse.1": "%Haley rolls her eyes at you and scoffs.#$b#Really? You actually want to stay in your <wet&messy> diaper? Well don't come crying to me when you get a rash$3",
 
   "Villager_Dialoges.Haley.Change.Player.1": "%Haley takes you someplace private and helps clean you up while she whines about it slightly.#$b#But soon enough, you're clean again. Haley smirks at you as she says with a playful tease.#$b#You own me one, brat.$3",
   "Villager_Dialoges.Haley.Change.Player.2": "%Haley helps you lay down and pulls down your and quickly goes about cleaning you up before putting you in a thick pink heart diaper.#$b#%She admires the cute diaper on you and coos.#$b#Awww! You look so freaking cute with that diaper! Seems my fashion sense works for diapers as well.$11#$b#%She realizes what she just said and catches you smirking at her and playfully rolls her eyes at you as she says with a playful mock snarky tone.#$b#Oh shut up...$1"

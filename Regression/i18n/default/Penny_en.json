@@ -40,16 +40,6 @@
   // Villager Reactions
   //#########################################
 
-  // Penny change your underwear general offer
-
-  "Villager_Reactions.Penny.Change.General_Offer.Player.1.Pre": "Did my big <boy/girl> forgot about the potty again?#$b#%Penny checks your diaper.",
-  "Villager_Reactions.Penny.Change.General_Offer.Player.1.Underwear_ok": "Good <boy/girl>!",
-
-  // You change Penny`s underwear general offer
-
-  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Pre": "Insert Text Offer change Penny",
-  "Villager_Reactions.Penny.Change.General_Offer.Npc.1.Underwear_ok": "Insert Text Underwear ok offer change Penny",
-
   // general fallback
 
   "Villager_Reactions.Penny.Change.General.Fallback.1.": "%Maybe you should get to know Penny better first!",
@@ -91,10 +81,15 @@
 
   // you check Penny's underwear friendship very nice
 
-  "Villager_Reactions.Penny.Check.Npc.Verynice.1": "",
+  "Villager_Reactions.Penny.Check.Npc.Verynice.1": "%You notice Penny fidgeting uncomfortably and decide to check her.#$b#%Penny looks up from her book for a brief moment and blushes as she shyly asks.#$b#Did... Did I get to distracted reading again...?$3",
+  "Villager_Reactions.Penny.Check.Npc.Verynice.2": "%You notice Penny absent mindedly sucking her thumb as she reads a book. You ask if she might need a change. #$b#%Without even looking away from her book she spreads her legs apart for you to check her.#$b#%She lisps from behind her thumb.#$b#Shh shh, i'm twying to wead dish book, ish really good.$0",
+
+  "Villager_Reactions.Penny.Check.Npc.Verynice.Check.1": "%You quickly check Pennys $NPC_UNDERWEAR_NAME$",
 
   // you check Penny's underwear friendship nice
 
+  "Villager_Reactions.Penny.Check.Npc.Nice.1": "%You ask Penny if she might need help with her pants.#$b#%Penny blushes and bashfully shakes her head before speaking.#$b#U-uhm...! I don't think you need to worry about me $FARMERNAME$. But.... think you for thinking of me.",
+  "Villager_Reactions.Penny.Check.Npc.Nice.2": "%You notice Penny fidgeting uncomfortably and ask if she needs a change.#$b#%Penny blushes and quickly shakes her head.#$b#W-what...? O-oh n-no! Of course n-not!.$12#$b#%When she sees you're not buying her lie she blushes more and says in an embarrassed whisper.#$b#Okay... I might need a change.... B-but I can do it myself! I don't want to be a burden... Thank you for trying to be helpful though...$0",
 
   // you check Penny's underwear friendship mean
 
@@ -116,7 +111,8 @@
   "Villager_Reactions.Penny.Check.Player.Verynice.Clean.1": "%Penny gasps playfully and claps her hands together for you as she puts on her preschool teacher voice.#$b#Woah, i'm impressed! Good job $FARMERNAME$, I'm so proud of you! I'll make sure to put a gold star on your chart.$1",
   "Villager_Reactions.Penny.Check.Player.Verynice.Clean.2": "%After finding your $UNDERWEAR_NAME$ clean, Penny ruffles your hair and pinches your cheek gently as she coos at you.#$b#Goodness, i'm almost shocked! I can't tell if i'm happy or disappointed you're not a 24/7 potty pants like Vincent. Less diapers to change for me....$0#$b#But that also means I can't treat you like a helpless and adorable baby... You know you make a cute baby, right?$1#$b#%Penny grins playfully at you before returning to what she was doing.",
 
-  "Villager_Reactions.Penny.Check.Player.Verynice.1": "%Penny smiles at you as she asks in her preschool teacher voice as if she was speaking to Vincent.#$b#Aww, $FARMERNAME$ Did you have an accident again? Come here, let Miss Penny see.#$b#Penny slips a hand down your $PANTS_NAME$ and gives you a thorough check and nods her head as she says with a smile.",
+  "Villager_Reactions.Penny.Check.Player.Verynice.1": "%Penny smiles at you as she asks in her preschool teacher voice as if she was speaking to Vincent.#$b#Aww, $FARMERNAME$ Did you have an accident again? Come here, let Miss Penny see.#$b#Penny slips a hand down your $PANTS_NAME$ and gives you a thorough check.",
+  "Villager_Reactions.Penny.Check.Player.Verynice.2": "%Penny smiles warmly at you as she coos to you in her preschool teacher voice.#$b#Uh oooh! I know that look, did someone go potty pants again? Come here baby, let Miss Penny check you out.$1#$b#%Without waiting for you to respond she moves your $PANTS_NAME$ out of the way and fully exposes your $UNDERWEAR_NAME$.#$b#%She squeezes your crotch and spins you around to tug on the back of your $UNDERWEAR_NAME$ to take a peak.",
 
   "Villager_Reactions.Penny.Check.Player.Verynice.Used.1": "%Penny thoroughly checks your <wet&messy> diaper and smiles a bit.#$b#Uhh ooooh, someone didn't quite make it, did <he/she>? Its okay, don't be sad, Miss Penny is here to make it aaall better for you, okay baby?$1#$b#Now how about you follow Miss Penny so she can get you into something clean, alright honey?$1",
 

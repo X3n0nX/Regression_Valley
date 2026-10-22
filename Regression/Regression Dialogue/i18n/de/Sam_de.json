@@ -1,5 +1,7 @@
 {
+  //########################################
   // Dialogues for Sam
+  //########################################
 
   "Sam.Dialogue.Thu6_1": "I think my Daddy might be coming back in a year or so.#$e#I guess you might be able to meet him, then. If you're still living here.#$e#You wouldn't abandon the farm after putting so much effort into it!",
   "Sam.Dialogue.Fri4": "Daddy used to work as a garbage man in the city.#$e#You don't even want to know some of the things he found in people's trash.",
@@ -22,7 +24,9 @@
   "Sam.Dialogue.winter_Thu6": "Daddy's been back for a while now. I guess I'm finally getting used to it.",
   "Sam.Dialogue.winter_Thu8": "We watched a movie as a family last night.$7#$b#Vincent fell asleep right away, so he wasn't in Mommy's lap like he usually is.#$b#I was sort of leaning against her shoulder, and she patted her lap so I laid my head down in it...$4#$b#It felt silly at first, but she pet my hair a lot and that was nice.$4#$e#I felt like her special little boy again.$10",
 
+  //########################################
   // Dialogues for Sam Questions
+  //########################################
 
   "Sam.Dialogue.Job_Pretext": "Ich kann es kaum glauben das ich eine Job habe...$2",
   "Sam.Dialogue.Job_Question": "Ich habe das Gef�hl, das ich noch gar nicht alt genug daf�r bin.",
@@ -53,7 +57,9 @@
   "Sam.Dialogue.Little_Excited": "Ja!$3#$b#%Sam quietscht vor Freude und versteckt sein knall rotes Gesicht.",
   "Sam.Dialogue.Little_Followup": "Durch dich f�hle ich mich immer so klein. Das bedeutet mir so viel, Danke dir.$4|Ich m�chte wirklich wieder die ganze Zeit Windeln tragen.$4#$b#Ich glaube nur, das ich das nicht kann, solange ich noch bei meiner Mum wohne$10",
 
+  //########################################
   // Dialogues for Sam Marriage
+  //########################################
 
   "Sam.Dialogue_Marriage.Rainy_Day_0": "%Sam is staring out the window, watching the rain roll down wearing just his soggy night diaper and pajama shirt.#$e#%He doesn't seem to notice you. He bends his knees slightly, gently pushing a soft mess into his diaper without a second though. Only then do you tap his shoulder.#$b#@!8#$b#I-I was just watchin' the rain$10.",
   "Sam.Dialogue_Marriage.Rainy_Day_1": "Sebastian loves this kind of weather. When we were little we used to go frog catching when it rained.#$e#Do you wanna go catch frogs?!$1",
@@ -122,26 +128,36 @@
   "Sam.Dialogue_Marriage.winter_7": "Are we going to stop by the ice festival tomorrow? It might be fun to see everyone again...",
   "Sam.Dialogue_Marriage.winter_28": "We had a great year, @... it's kind of sad that it's over.#$e#We'll just have to make next year even better!$h",
 
+  //########################################
   // Diaperchange to Sam
+  //########################################
 
-  "Sam.Change_Diaper.Accept_BabyPrint": "Sind das Vincents? Ich... mmm.$8#$b#%Du wickelst Sam w�hrend er sich mit beiden H�nden die Augen zug�lt. So niedlich!#$b#...$9#$b#Irgendwie gefallen sie mir.$8",
+  "Sam.Change_Diaper.Accept_BabyPrint": "Sind das Vincents? Ich... mmm.$8#$b#%Du wickelst Sam während er sich mit beiden Händen die Augen zugält. So niedlich!#$b#...$9#$b#Irgendwie gefallen sie mir.$8",
   "Sam.Change_Diaper.Accept_BabyPrint_Post": "%Passen gut, ein wenig eng vieleicht. Eine andere Windel w�rde ihm aber wahrscheinlich besser passen?",
 
-  "Sam.Change_Diaper.Accept_Training": "Sind das... Trainings H�chsen?$8#$b#%Du ziehst Sam ein paar Trainings H�chsen an.#$b#%Er w�rde es wahrscheinlich auf die Toilette schaffen. Aber du bist dir sicher, das seine Hose bis zum Ende der Stunde wieder nass seins wird.",
-  "Sam.Change_Diaper.Accept_Training_Post": "%Wahrscheinlich w�rde er eine andere Sorte mehr m�gen.",
+  "Sam.Change_Diaper.Accept_Training": "Sind das... Trainings Höchsen?$8#$b#%Du ziehst Sam ein paar Trainings Höchsen an.#$b#%Er würde es wahrscheinlich auf die Toilette schaffen. Aber du bist dir sicher, das seine Hose bis zum Ende der Stunde wieder nass seins wird.",
+  "Sam.Change_Diaper.Accept_Training_Post": "%Wahrscheinlich würde er eine andere Sorte mehr mögen.",
 
-  "Sam.Change_Diaper.Accept_BigKids": "Bist du sicher ich bin bereit daf�r?$1#$b#%Du ziehst Sam ein paar Unterhosen f�r gro�e Kinder an.#$b#%Er sieht ein wenig bedr�ckt aus. Vielleicht ist er doch nicht so ein gro�es Kind, wie er dir weismachen will.$1",
+  "Sam.Change_Diaper.Accept_BigKids": "Bist du sicher ich bin bereit dafür?$1#$b#%Du ziehst Sam ein paar Unterhosen f�r gro�e Kinder an.#$b#%Er sieht ein wenig bedr�ckt aus. Vielleicht ist er doch nicht so ein gro�es Kind, wie er dir weismachen will.$1",
   "Sam.Change_Diaper.Accept_BigKids_Post": "",
 
-  "Sam.Change_Diaper.Accept_Joja": "Das ist eine aus dem Joja Markt, oder? Ich habe sie schon einmal probiert, sie passen besser. Aber das letzte mal habe ich die Couch nass gemacht als Ich...$8#$b#%Du wickelst Sam in eine Joja Windel w�hrend er gerade merkt, was er gerade zugegeben hat.#$b#Ich habe Mum erz�hlt es war Vincent.$9",
-  "Sam.Change_Diaper.Accept_Joja_Post": "%Eine andere Marke w�hre wahrscheinlich besser...",
+  "Sam.Change_Diaper.Accept_Joja": "Das ist eine aus dem Joja Markt, oder? Ich habe sie schon einmal probiert, sie passen besser. Aber das letzte mal habe ich die Couch nass gemacht als Ich...$8#$b#%Du wickelst Sam in eine Joja Windel w�hrend er gerade merkt, was er gerade zugegeben hat.#$b#Ich habe Mum erzählt es war Vincent.$9",
+  "Sam.Change_Diaper.Accept_Joja_Post": "%Eine andere Marke währe wahrscheinlich besser...",
 
-  "Sam.Change_Diaper.Accept_HeartDiaper": "Ein Herz, wie... s��?$1#$b#%Du wickelst Sam in eine Herz Windel.#$b#%Er tut so, als w�rde er sie nicht besonders m�gen. Wegen dem Design. Aber da er in dieser dicken, kuschligen und knisternden Windel steckt, kann er seine Faszination nicht lange verbergen",
-  "Sam.Change_Diaper.Accept_HeartDiaper_Post": "%Ich denke sie gef�llt ihm...$9#$b#Du hast den Eindruck, das Sam sie viel mehr mag, als er zugeben m�schte. Und er sieht so s�� in ihr aus.",
+  "Sam.Change_Diaper.Accept_HeartDiaper": "Ein Herz, wie... süß?$1#$b#%Du wickelst Sam in eine Herz Windel.#$b#%Er tut so, als würde er sie nicht besonders mögen. Wegen dem Design. Aber da er in dieser dicken, kuschligen und knisternden Windel steckt, kann er seine Faszination nicht lange verbergen",
+  "Sam.Change_Diaper.Accept_HeartDiaper_Post": "%Ich denke sie gefällt ihm...$9#$b#Du hast den Eindruck, das Sam sie viel mehr mag, als er zugeben möchte. Und er sieht so süß in ihr aus.",
 
+  "Sam.Change_Diaper.Refuse_Pretext": "Nee, passt schon! Wirklich, alles gut.",
+  "Sam.Change_Diaper.Refuse_SlightlyWet": "Er ist ein bisschen feucht, aber das kann wohl noch etwas warten.",
+  "Sam.Change_Diaper.Refuse_UsedBad": "Als Sam in seiner schweren Windel davonschlurft, bist du dir ziemlich sicher, dass gar nichts gut ist.",
+
+  "Sam.Change_Diaper.Followup": "...",
+
+  //########################################
   // Diaperchange from Sam
+  //########################################
 
-  "Sam.Diaper_Change.Accept": "Ah, halt still. Keine Sorge, ich habe Vincent schon oft gewickelt als ich auf Ihn aufgepasst habe!$l#$b#%Sam wechselt deine Windel als w�rde er es bei Vincent tun.",
-  "Sam.Diaper_Change.Refuse": "Willst du heute noch mit den gro�en Kindern spielen? Ich kann sie von hier aus durchh�ngen sehen!",
+  "Sam.Diaper_Change.Accept": "Ah, halt still. Keine Sorge, ich habe Vincent schon oft gewickelt als ich auf Ihn aufgepasst habe!$l#$b#%Sam wechselt deine Windel als würde er es bei Vincent tun.",
+  "Sam.Diaper_Change.Refuse": "Willst du heute noch mit den großen Kindern spielen? Ich kann sie von hier aus durchhängen sehen!",
   "Sam.Diaper_Change.Followup": "..."
 }

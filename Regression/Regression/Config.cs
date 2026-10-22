@@ -70,6 +70,12 @@ namespace RegressionMod
         /// <summary> Key to check your potty feeling.</summary>
         public SButton KeyCheckPottyFeeling = SButton.F8;
 
+        /// <summary> Key, in combination with left shift, to ask a npc to check it underwear.</summary>
+        public SButton KeyAskCheckNpc = SButton.V;
+
+        /// <summary> Key, in combination with left shift, to ask a npc to check your underwear.</summary>
+        public SButton KeyAskCheckPlayer = SButton.B;
+
         #region Debug keys
 
         /// <summary> Key to toggle debug mode.</summary>

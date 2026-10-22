@@ -36,6 +36,8 @@
   "KeyCheckPottyTraining": "F7", // F7 - Key to check the state of your potty training
   "KeyCheckPottyFeeling": "F8", // F8 - Key to check the state of your potty feeling
   "KeyToggleDebug": "F9", // F9 - Key to toggle debug mode
+  "KeyAskCheckNpc": "V", // V - Key, in combination with left shift, to ask a npc to check it underwear
+  "KeyAskCheckPlayer": "B", // BS - Key, in combination with left shift, to ask a npc to check your underwear
   "KeyDebugDecrease": "F1", // F1 - Key, in combination with right alt key to decrease food, water, bladder fullness and bowel fullness in debug mode
   "KeyDebugIncrease": "F2", // F2 - Key, in combination with right alt key to increase food, water, bladder fullness and bowel fullness in debug mode
   "KeyDebugGiveUnderwear": "F3", // F3 - Key, in combination with right alt key to give underwear in debug mode

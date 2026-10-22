@@ -1,5 +1,7 @@
 {
+  //########################################
   // Dialogues for Sam
+  //########################################
 
   "Sam.Dialogue.Thu6_1": "I think my Daddy might be coming back in a year or so.#$e#I guess you might be able to meet him, then. If you're still living here.#$e#You wouldn't abandon the farm after putting so much effort into it!",
   "Sam.Dialogue.Fri4": "Daddy used to work as a garbage man in the city.#$e#You don't even want to know some of the things he found in people's trash.",
@@ -22,7 +24,9 @@
   "Sam.Dialogue.winter_Thu6": "Daddy's been back for a while now. I guess I'm finally getting used to it.",
   "Sam.Dialogue.winter_Thu8": "We watched a movie as a family last night.$7#$b#Vincent fell asleep right away, so he wasn't in Mommy's lap like he usually is.#$b#I was sort of leaning against her shoulder, and she patted her lap so I laid my head down in it...$4#$b#It felt silly at first, but she pet my hair a lot and that was nice.$4#$e#I felt like her special little boy again.$10",
 
+  //########################################
   // Dialogues for Sam Questions
+  //########################################
 
   "Sam.Dialogue.Job_Pretext": "I can't believe I have a job...$2",
   "Sam.Dialogue.Job_Question": "It almost feels like I'm not old enough yet.",
@@ -55,7 +59,9 @@
   "Sam.Dialogue.Little_Excited": "Yeah!$3#$b#%Sam squeals happily and hides his blushing face.",
   "Sam.Dialogue.Little_Followup": "You always make me feel so little. It means so much to me, thank you.$4|I really want to go back to diapers full time.$4#$b#I just don't think I can while I'm still living with Mommy.$10",
 
+  //########################################
   // Dialogues for Sam Marriage
+  //########################################
 
   "Sam.Dialogue_Marriage.Rainy_Day_0": "%Sam is staring out the window, watching the rain roll down wearing just his soggy night diaper and pajama shirt.#$e#%He doesn't seem to notice you. He bends his knees slightly, gently pushing a soft mess into his diaper without a second though. Only then do you tap his shoulder.#$b#@!8#$b#I-I was just watchin' the rain$10.",
   "Sam.Dialogue_Marriage.Rainy_Day_1": "Sebastian loves this kind of weather. When we were little we used to go frog catching when it rained.#$e#Do you wanna go catch frogs?!$1",
@@ -124,7 +130,9 @@
   "Sam.Dialogue_Marriage.winter_7": "Are we going to stop by the ice festival tomorrow? It might be fun to see everyone again...",
   "Sam.Dialogue_Marriage.winter_28": "We had a great year, @... it's kind of sad that it's over.#$e#We'll just have to make next year even better!$h",
 
+  //########################################
   // Diaperchange to Sam
+  //########################################
 
   "Sam.Change_Diaper.Accept_BabyPrint": "Are those vincents? I... mmm.$8#$b#%You change sam while he is covering his eyes with both of his hands. How cute!#$b#...$9#$b#I kind of like them.$8",
   "Sam.Change_Diaper.Accept_BabyPrint_Post": "%Seams fine, a little small perhaps. Maybe another diaper would fit him better?",
@@ -141,7 +149,14 @@
   "Sam.Change_Diaper.Accept_HeartDiaper": "A heart, how... cute?$1#$b#%You change sam into a heart diaper.#$b#%He playes it off like he doesn't like it all that much, considering the design. But being in those thick, cosy, crinkeling diapers, he can't keep up the fascade long.",
   "Sam.Change_Diaper.Accept_HeartDiaper_Post": "%I guess they are nice...$9#$b#You get the impression sam likes those way more than he is willing to admit. And he looks very cute in them.",
 
+  "Sam.Change_Diaper.Refuse_Pretext": "Nah, I'm good! Totally fine, really.",
+  "Sam.Change_Diaper.Refuse_SlightlyWet": "He's a little damp, but it can probably wait a bit.",
+  "Sam.Change_Diaper.Refuse_UsedBad": "Watching Sam shuffle off in his heavy diaper, you are pretty sure he is not fine at all.",
+  "Sam.Change_Diaper.Followup": "...",
+
+  //########################################
   // Diaperchange from Sam
+  //########################################
 
   "Sam.Diaper_Change.Followup": "..."
 }

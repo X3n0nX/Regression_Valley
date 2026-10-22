@@ -229,6 +229,22 @@ namespace RegressionMod
                 getValue: () => (SButton)config.KeyCheckPottyFeeling,
                 setValue: value => config.KeyCheckPottyFeeling = value
             );
+            // Ask NPC to Check Underwear
+            configMenu.AddKeybind(
+                mod: modManifest,
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Key_Bindings.Ask_Check_Npc.Name}}"),
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Key_Bindings.Ask_Check_Npc.Tooltip}}"),
+                getValue: () => (SButton)config.KeyAskCheckNpc,
+                setValue: value => config.KeyAskCheckNpc = value
+            );
+            // Ask NPC to Check Player Underwear
+            configMenu.AddKeybind(
+                mod: modManifest,
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Key_Bindings.Ask_Check_Player.Name}}"),
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Key_Bindings.Ask_Check_Player.Tooltip}}"),
+                getValue: () => (SButton)config.KeyAskCheckPlayer,
+                setValue: value => config.KeyAskCheckPlayer = value
+            );
             // Toggle Debug Mode
             configMenu.AddKeybind(
                 mod: modManifest,
