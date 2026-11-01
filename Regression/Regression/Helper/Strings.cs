@@ -680,8 +680,9 @@ namespace RegressionMod
                 if (id < 1)
                 {
                     int rndId = 0;
+                    List<int> keys = changingDialoges.Keys.ToList();
 
-                    rndId = Regression.rnd.Next(1, changingDialoges.Count);
+                    rndId = keys[Regression.rnd.Next(keys.Count)];
                     return changingDialoges[rndId];
                 }
                 else
@@ -716,7 +717,9 @@ namespace RegressionMod
 
                 if (changingDialoges != null)
                 {
-                    rndId = Regression.rnd.Next(1, changingDialoges.Count);
+                    List<int> keys = changingDialoges.Keys.ToList();
+
+                    rndId = keys[Regression.rnd.Next(keys.Count)];
                     return changingDialoges[rndId];
                 }
                 else throw new Exception($"Key {keyGender} or Key {key} not found in Villager_Changeing_Dialoges");
@@ -729,7 +732,9 @@ namespace RegressionMod
 
                 if (changingDialoges != null)
                 {
-                    rndId = Regression.rnd.Next(1, changingDialoges.Count);
+                    List<int> keys = changingDialoges.Keys.ToList();
+
+                    rndId = keys[Regression.rnd.Next(keys.Count)];
                     return changingDialoges[rndId];
                 }
                 else throw new Exception($"Key {keyGender} or Key {key} not found in Villager_Changeing_Dialoges");

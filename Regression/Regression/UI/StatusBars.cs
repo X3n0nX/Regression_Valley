@@ -45,13 +45,13 @@ namespace RegressionMod
             {
                 if (config.Messing)
                 {
-                    float percentage = body.GetBowelPercent();
+                    float percentage = body.Get(IncidentType.POOP).Percent;
                     StatusBars.DrawStatusBar(x1, y1, percentage, new Color(146, 111, 91));
                     x1 -= 10 + StatusBars.barWidth;
                 }
                 if (config.Wetting)
                 {
-                    float percentage = body.GetBladderPercent();
+                    float percentage = body.Get(IncidentType.PEE).Percent;
                     StatusBars.DrawStatusBar(x1, y1, percentage, new Color(byte.MaxValue, 225, 56));
                 }
             }

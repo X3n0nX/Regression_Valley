@@ -211,11 +211,11 @@
   // Villager Changeing Dialoges for non specific npc´s
   // ########################################
 
-  "Villager_Dialoges.adult_male.Change.Player.1": "%He tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
-  "Villager_Dialoges.adult_male.Change.Player.2": "%Without another word, he takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1",
+  "Villager_Dialoges.adult_male.Change.Player.Accept.1": "%He tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
+  "Villager_Dialoges.adult_male.Change.Player.Accept.2": "%Without another word, he takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1",
 
-  "Villager_Dialoges.adult_female.Change.Player.1": "%She tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
-  "Villager_Dialoges.adult_female.Change.Player.2": "%Without another word, she takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1",
+  "Villager_Dialoges.adult_female.Change.Player.Accept.1": "%She tapes you up nice and snug in a new diaper.#$b#There we go, all clean!$1",
+  "Villager_Dialoges.adult_female.Change.Player.Accept.2": "%Without another word, she takes you aside and changes you into a clean baby diaper.#$b#There we go, a baby diaper for the baby <boy/girl>!$1",
 
   // ########################################
   // Villager Gift Dialoges for non specific npc´s
@@ -223,5 +223,5 @@
   // ########################################
 
   "Villager_Dialoges.adult_male.Gift.Player.1": "%He discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1",
-  "Villager_Dialoges.adult_female.Gift.Player.2": "%She discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1"
+  "Villager_Dialoges.adult_female.Gift.Player.1": "%She discretely hands you a clean diaper.#$b#You'll feel better once you get that on.$1"
 }

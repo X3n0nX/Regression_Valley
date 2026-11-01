@@ -48,9 +48,9 @@ namespace RegressionMod
         }
         public static void DrawStateIcon(Body b, IncidentType type, int x, int y)
         {
-            float newFullness = b.GetFullness(type) / b.GetCapacity(type);
+            float newFullness = b.Get(type).Fullness / b.Get(type).Capacity;
 
-            if (newFullness < Body.trainingThreshold || newFullness < (1 - b.GetContinence(type))) return;
+            if (newFullness < Body.trainingThreshold || newFullness < (1 - b.Get(type).Continence)) return;
 
             int topOffset = AnimationConstants.LargeSpriteDim - (int)Math.Ceiling(newFullness * AnimationConstants.LargeSpriteDim);
             Color defaultColor = Color.White;

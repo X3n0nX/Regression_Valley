@@ -580,21 +580,21 @@ namespace RegressionMod
                     case NpcConstants.NpcVincent:
                         return "baby print diaper";
                     case NpcConstants.NpcJas:
-                        return Regression.rnd.Next(1, 3) != 3 ? "training pants" : "lavender pullups"; // sometimes the training pants are all dirty
+                        return Regression.rnd.NextDouble() < 33.0 ? "training pants" : "lavender pullups"; // sometimes the training pants are all dirty
                     case NpcConstants.NpcSam:
-                        return Regression.rnd.Next(1, 4) != 4 ? "training pants" : "baby print diaper"; // sometimes sam tries bigger diapers
+                        return Regression.rnd.NextDouble() < 25.0 ? "training pants" : "baby print diaper"; // sometimes sam tries bigger diapers
                     case NpcConstants.NpcAbigail:
-                        return Regression.rnd.Next(1, 2) != 2 ? "lavender pullups" : "joja diaper"; // sometimes abigail tries bigger diapers
+                        return Regression.rnd.NextDouble() < 50.0 ? "lavender pullups" : "joja diaper"; // sometimes abigail tries bigger diapers
                     case NpcConstants.NpcMaru:
-                        return Regression.rnd.Next(1, 10) != 10 ? "lavender pullups" : "space diaper"; // sometimes maru tries bigger diapers
+                        return Regression.rnd.NextDouble() < 10.0 ? "lavender pullups" : "space diaper"; // sometimes maru tries bigger diapers
                     case NpcConstants.NpcEmily:
                         return "cloth diaper";  // emily tailor her own diapers
                     case NpcConstants.NpcHaley:
-                        return Regression.rnd.Next(1, 10) != 10 ? "lavender pullups" : "heart diaper"; // sometimes haley tries bigger diapers
+                        return Regression.rnd.NextDouble() < 10.0 ? "lavender pullups" : "heart diaper"; // sometimes haley tries bigger diapers
                     case NpcConstants.NpcLeah:
-                        return Regression.rnd.Next(1, 10) != 10 ? "lavender pullups" : "pawprint diaper"; // sometimes leah tries bigger diapers
+                        return Regression.rnd.NextDouble() < 10.0 ? "lavender pullups" : "pawprint diaper"; // sometimes leah tries bigger diapers
                     case NpcConstants.NpcPenny:
-                        return Regression.rnd.Next(1, 10) != 10 ? "lavender pullups" : "heart diaper"; // sometimes haley tries bigger diapers
+                        return Regression.rnd.NextDouble() < 10.0 ? "lavender pullups" : "heart diaper"; // sometimes haley tries bigger diapers
                     default:
                         return npc.Gender == Gender.Female ? "polka dot panties" : "big kid undies";
                 }

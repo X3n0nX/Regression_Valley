@@ -139,8 +139,8 @@
   "Emily.Dialogue_Marriage.Outdoor_3": "A little sunlight is good for you. Just don't get crispy, okay?",
   "Emily.Dialogue_Marriage.Outdoor_4": "Good morning! I was wondering when you'd finally roll out of bed!$h#$e#It's okay, @... you deserve a good night of rest.",
 
-  "funLeave_Emily": "I'm going to visit town today, and later on I'm going to help out at the saloon. Have a nice day.",
-  "funReturn_Emily": "My day went well... it's good to get out of the house now and then.",
+  "Emily.Dialogue_Marriage.funLeave_Emily": "I'm going to visit town today, and later on I'm going to help out at the saloon. Have a nice day.",
+  "Emily.Dialogue_Marriage.funReturn_Emily": "My day went well... it's good to get out of the house now and then.",
 
   "Emily.Dialogue_Marriage.OneKid_0": "I hope we can raise %kid1 to be kind and considerate. That's more important than getting A's in school.",
   "Emily.Dialogue_Marriage.OneKid_1": "Is one child enough, or should we raise another?#$e#I guess we'll just see where fate leads us.",
@@ -156,8 +156,8 @@
   "Emily.Dialogue_Marriage.Good_5": "I was just admiring my wedding amulet... The shell is beautiful! I can feel the pure blue energy radiating from it.$l",
   "Emily.Dialogue_Marriage.Good_6": "I had another dream about us last night. We had climbed to the top of a crystal tree, looking down on the most lush and beautiful meadow. I keep having this dream.#$e#I don't know what it means, but I feel that it's a good omen.",
 
-  "Neutral_0": "I hope you'll still like me when I grow old and my hair turns to a dull, faded steel.",
-  "Neutral_8": "I feel uninspired today.$s",
+  "Emily.Dialogue_Marriage.Neutral_0": "I hope you'll still like me when I grow old and my hair turns to a dull, faded steel.",
+  "Emily.Dialogue_Marriage.Neutral_8": "I feel uninspired today.$s",
 
 
   "Emily.Dialogue_Marriage.spring_1": "Happy new year, honey. Let's make this a special one.$4",
@@ -200,7 +200,7 @@
 
   "Emily.Change_Diaper.Refuse_Pretext": "",
   "Emily.Change_Diaper.Refuse_SlightlyWet": "",
-  "Emily.Change_Diaper.Refuse_UsedBadt": "",
+  "Emily.Change_Diaper.Refuse_UsedBad": "",
   "Emily.Change_Diaper.Followup": "...",
 
   //########################################

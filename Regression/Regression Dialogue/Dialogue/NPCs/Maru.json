@@ -8,8 +8,8 @@
 
         "Change_Diaper_Accept_BabyPrint": "{{i18n:Maru.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"maru\" \"baby print diaper\"#$b#%{{i18n:Maru.Change_Diaper.Accept_BabyPrint_Post}}",
         "Change_Diaper_Accept_Lavender": "{{i18n:Maru.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"maru\" \"lavender pullups\"#$b#%{{i18n:Maru.Change_Diaper.Accept_Lavender_Post}}",
-        "Change_Diaper_Accept_Joja": "{{i18n:Maru.Change_Diaper.Accept_BigKids}}#$action CHANGE_DIAPER_OTHERS \"maru\" \"joja diaper\"#$b#%{{i18n:Maru.Change_Diaper.Accept_BigKids_Post}}",
-        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Maru.Change_Diaper.Accept_Dinos}}#$action CHANGE_DIAPER_OTHERS \"maru\" \"heart diaper\"#$b#%{{i18n:Maru.Change_Diaper.Accept_Dinos_Post}}",
+        "Change_Diaper_Accept_SpaceDiaper": "{{i18n:Maru.Change_Diaper.Accept_SpaceDiaper}}#$action CHANGE_DIAPER_OTHERS \"maru\" \"space diaper\"#$b#%{{i18n:Maru.Change_Diaper.Accept_SpaceDiaper_Post}}",
+        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Maru.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"maru\" \"heart diaper\"#$b#%{{i18n:Maru.Change_Diaper.Accept_HeartDiaper_Post}}",
         "Change_Diaper_Refuse": "{{i18n:Maru.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Maru.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Maru.Change_Diaper.Refuse_UsedBad}}]",
         "Change_Diaper_Followup": "...",
 

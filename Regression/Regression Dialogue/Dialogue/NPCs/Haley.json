@@ -8,7 +8,7 @@
 
         "Change_Diaper_Accept_BabyPrint": "{{i18n:Haley.Change_Diaper.Accept_BabyPrint}}#$action CHANGE_DIAPER_OTHERS \"haley\" \"baby print diaper\"#$b#%{{i18n:Haley.Change_Diaper.Accept_BabyPrint_Post}}",
         "Change_Diaper_Accept_Lavender": "{{i18n:Haley.Change_Diaper.Accept_Lavender}}#$action CHANGE_DIAPER_OTHERS \"haley\" \"lavender pullups\"#$b#%{{i18n:Haley.Change_Diaper.Accept_Lavender_Post}}",
-        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Haley.Change_Diaper.Accept_Dinos}}#$action CHANGE_DIAPER_OTHERS \"haley\" \"heart diaper\"#$b#%{{i18n:Haley.Change_Diaper.Accept_Dinos_Post}}",
+        "Change_Diaper_Accept_HeartDiaper": "{{i18n:Haley.Change_Diaper.Accept_HeartDiaper}}#$action CHANGE_DIAPER_OTHERS \"haley\" \"heart diaper\"#$b#%{{i18n:Haley.Change_Diaper.Accept_HeartDiaper_Post}}",
         "Change_Diaper_Refuse": "{{i18n:Haley.Change_Diaper.Refuse_Pretext}}$4#$b#%[NpcOnSlightlyWet: {{i18n:Haley.Change_Diaper.Refuse_SlightlyWet}}][NpcOnUsedBad: {{i18n:Haley.Change_Diaper.Refuse_UsedBad}}]",
         "Change_Diaper_Followup": "...",
 

@@ -225,7 +225,7 @@ namespace RegressionMod
         {
             bool first = b.numPottyPeeAtNight > 0;
             bool second = b.numPottyPooAtNight > 0;
-            if (!b.IsAllowedResource(IncidentType.PEE) && !b.IsAllowedResource(IncidentType.POOP))
+            if (!b.Get(IncidentType.PEE).IsEnabled && !b.Get(IncidentType.POOP).IsEnabled)
                 return;
 
             var list = generalData.Night;
@@ -353,26 +353,26 @@ namespace RegressionMod
 
         public static void CheckContinence(Body b)
         {
-            if (b.IsAllowedResource(IncidentType.PEE))
+            if (b.Get(IncidentType.PEE).IsEnabled)
             {
                 WarnCurrentThreshold(Body.BLADDER_CONTINENCE_THRESHOLDS, Body.BLADDER_CONTINENCE_MESSAGES, b.bladderContinence);
             }
 
-            if (b.IsAllowedResource(IncidentType.POOP))
+            if (b.Get(IncidentType.POOP).IsEnabled)
             {
                 WarnCurrentThreshold(Body.BOWEL_CONTINENCE_THRESHOLDS, Body.BOWEL_CONTINENCE_MESSAGES, b.bowelContinence);
             }
         }
         public static void CheckPottyFeeling(Body b)
         {
-            Dialoges.Warn((b.IsAllowedResource(IncidentType.PEE) ? Strings.RandString(GetPottyFeeling(b, IncidentType.PEE)) + " " : "") + (b.IsAllowedResource(IncidentType.POOP) ? Strings.RandString(GetPottyFeeling(b, IncidentType.POOP)) : ""));
+            Dialoges.Warn((b.Get(IncidentType.PEE).IsEnabled ? Strings.RandString(GetPottyFeeling(b, IncidentType.PEE)) + " " : "") + (b.Get(IncidentType.POOP).IsEnabled ? Strings.RandString(GetPottyFeeling(b, IncidentType.POOP)) : ""));
         }
 
         public static string[] GetPottyFeeling(Body b, IncidentType type)
         {
-            float newFullness = b.GetFullness(type) / b.GetCapacity(type);
+            float newFullness = b.Get(type).Fullness / b.Get(type).Capacity;
             string[] pottyMessages = null;
-            if (newFullness > (1 - b.GetContinence(type)))
+            if (newFullness > (1 - b.Get(type).Continence))
             {
                 pottyMessages = GetCurrentThreshold(type == IncidentType.PEE ? Body.WETTING_THRESHOLDS : Body.MESSING_THRESHOLDS, type == IncidentType.PEE ? Body.WETTING_MESSAGES : Body.MESSING_MESSAGES, newFullness, false);
             }
