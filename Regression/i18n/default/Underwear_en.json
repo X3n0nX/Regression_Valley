@@ -346,5 +346,13 @@
 
   // lil swabbies
   "Underwear_Options.Lil_Swabbies.Name": "lil swabbies",
-  "Underwear_Options.Lil_Swabbies.Description": "puffy light-blue diaper, sporting a fashionable sea-faring design"
+  "Underwear_Options.Lil_Swabbies.Description": "puffy light-blue diaper, sporting a fashionable sea-faring design",
+
+  // ########################################
+  // States of your curently worn underwear for visible underwear
+  // ########################################
+
+  "Underwear.State.Wet": "wet",
+  "Underwear.State.Messy": "messy",
+  "Underwear.State.WetAndMessy": "wet and messy"
 }

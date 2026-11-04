@@ -345,5 +345,13 @@
 
   // lil swabbies
   "Underwear_Options.Lil_Swabbies.Name": "Matrosen Windel",
-  "Underwear_Options.Lil_Swabbies.Description": "bauschige, hell blaue windel mit modischem Seefahrts Desing"
+  "Underwear_Options.Lil_Swabbies.Description": "bauschige, hell blaue windel mit modischem Seefahrts Desing",
+
+  // ########################################
+  // States of your curently worn underwear for visible underwear
+  // ########################################
+
+  "Underwear.State.Wet": "nass",
+  "Underwear.State.Messy": "voll",
+  "Underwear.State.WetAndMessy": "nass und voll"
 }

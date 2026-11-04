@@ -23,6 +23,11 @@
   "Config_Menu.Main.Messing.Name": "Kacken",
   "Config_Menu.Main.Messing.Tooltip": "Dies aktiviert die Kack und Darm Events.",
 
+  // Show Underwear Without Pants
+
+  "Config_Menu.Main.Show_Underwear_Without_Pants.Name": "Unterwäsche ohne Hose zeigen",
+  "Config_Menu.Main.Show_Underwear_Without_Pants.Tooltip": "Wenn du keine Hose trägst, zeigt die Spielfigur die Unterwäsche oder Windel, die du gerade anhast.",
+
   // Children and Diapers 
 
   "Config_Menu.Main.Children_And_Diapers.Name": "Kinder und Windeln",

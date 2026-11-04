@@ -31,7 +31,10 @@
 		<None Update="Assets\sprites.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-    <None Update="Assets\toilets.png">
+    <None Update="Assets\Housing\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Underwear\*.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
 		<None Update="config.json">

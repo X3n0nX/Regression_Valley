@@ -34,6 +34,7 @@ namespace RegressionMod
         public bool ReturnUsedCloth = true;
         public bool ReturnUsedDisposable = true;
         public bool HideUnderwearStatusIcon = false;
+        public bool ShowUnderwearWithoutPants = true;
 
         #region Keys              
 

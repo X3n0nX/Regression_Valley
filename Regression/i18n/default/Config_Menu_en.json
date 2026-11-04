@@ -23,6 +23,11 @@
   "Config_Menu.Main.Messing.Name": "Messing",
   "Config_Menu.Main.Messing.Tooltip": "This activates poop and bowel events.",
 
+  // Show Underwear Without Pants
+
+  "Config_Menu.Main.Show_Underwear_Without_Pants.Name": "Show Underwear Without Pants",
+  "Config_Menu.Main.Show_Underwear_Without_Pants.Tooltip": "If you wear no pants, your farmer is drawn wearing the underwear or diaper you currently have on.",
+
   // Children and Diapers 
 
   "Config_Menu.Main.Children_And_Diapers.Name": "Children and Diapers",

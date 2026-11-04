@@ -25,14 +25,13 @@ namespace RegressionMod
             //base.Actor();
             this.Initialize(baseType, count);
         }
-        public static readonly string modDataKey = "PrimevalTitmouse/Underwear";
 
         public Color color
         {
             get
             {
                 string colorStr;
-                modData.TryGetValue("${modDataKey}/color", out colorStr);
+                modData.TryGetValue(UnderwearConstants.ModDataPrefix + "/color", out colorStr);
                 if (!string.IsNullOrEmpty(colorStr))
                 {
                     uint colorValue = uint.Parse(colorStr);
@@ -51,7 +50,7 @@ namespace RegressionMod
                        (uint)(value.G * 255) << 16 |
                        (uint)(value.B * 255) << 8 |
                        (uint)(value.A * 255)).ToString();
-                modData.Add("${modDataKey}/color", colorStr);
+                modData.Add(UnderwearConstants.ModDataPrefix + "/color", colorStr);
             }
         }
         private Container _container;
@@ -173,7 +172,7 @@ namespace RegressionMod
             int d = c.durability;
 
             string dryingTimeStr = "";
-            modData.TryGetValue(Container.BuildKeyFor("dryingTime", modDataKey), out dryingTimeStr);
+            modData.TryGetValue(Container.BuildKeyFor("dryingTime", UnderwearConstants.ModDataPrefix), out dryingTimeStr);
 
             Initialize(Container.GetTypeDefault(t, sub), Stack);
 

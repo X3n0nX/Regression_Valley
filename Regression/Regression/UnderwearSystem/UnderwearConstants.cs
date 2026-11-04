@@ -2,6 +2,12 @@
 {
     public class UnderwearConstants
     {
+        #region Mod Data
+
+        public const string ModDataPrefix = "PrimevalTitmouse/Underwear";
+
+        #endregion
+
         #region Underwear Types
 
         public const string BlackThong = "black thong";

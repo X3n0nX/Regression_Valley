@@ -68,6 +68,7 @@ namespace RegressionMod
             h.Events.GameLoop.OneSecondUpdateTicking += new EventHandler<OneSecondUpdateTickingEventArgs>(ReceiveUpdateTick);
             h.Events.GameLoop.TimeChanged += new EventHandler<TimeChangedEventArgs>(ReceiveTimeOfDayChanged);
             h.Events.Content.AssetRequested += Toilets.OnAssetRequested;
+            h.Events.Content.AssetRequested += VisualUnderwear.OnAssetRequested;
             h.Events.GameLoop.GameLaunched += new EventHandler<GameLaunchedEventArgs>(OnGameLaunched);
             h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveKeyPress);
             h.Events.Input.ButtonPressed += new EventHandler<ButtonPressedEventArgs>(ReceiveMouseChanged);
@@ -355,7 +356,7 @@ namespace RegressionMod
             {
                 var item = items[i];
                 // we have to access the type this way, because it's not yet of the correct class
-                if (item?.modData?.ContainsKey(Container.BuildKeyFor("type", Underwear.modDataKey)) == true)
+                if (item?.modData?.ContainsKey(Container.BuildKeyFor("type", UnderwearConstants.ModDataPrefix)) == true)
                 {
                     var underwear = new Underwear();
                     underwear.modData.CopyFrom(item.modData);

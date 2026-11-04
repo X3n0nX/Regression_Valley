@@ -12,7 +12,7 @@ namespace RegressionMod
 
         public static readonly string modDataAdd = "Container";
 
-        private string modDataBaseKey; // comes from the parent
+        private string modDataPrefix; // comes from the parent
         private ModDataDictionary modDataDictionary; // also comes from the parent
 
         private static TypesData typesData = Regression.typesData;
@@ -29,12 +29,12 @@ namespace RegressionMod
         // in this case we have a parent. We keep track and update this parent for network sync purposes
         public Container(Underwear underwear, string fallbackType)
         {
-            modDataBaseKey = Underwear.modDataKey;
+            modDataPrefix = UnderwearConstants.ModDataPrefix;
             modDataDictionary = underwear.modData;
         }
         public Container(Body body, ContainerSubtype subtype, string fallbackType, bool updateToFallback = false)
         {
-            modDataBaseKey = BodyConstants.ModDataPrefix + "/" + GetStringSubtype(subtype);
+            modDataPrefix = BodyConstants.ModDataPrefix + "/" + GetStringSubtype(subtype);
             modDataDictionary = Game1.player.modData;
 
             if(updateToFallback)
@@ -52,7 +52,7 @@ namespace RegressionMod
         public Container(NPC npc, ContainerSubtype subtype, string fallbackType, bool updateToFallback = false)
         {
             //Regression.monitor.Log($"Container: {npc.Name}  {subtype.ToString()}");
-            modDataBaseKey = "NPC/" + GetStringSubtype(subtype);
+            modDataPrefix = "NPC/" + GetStringSubtype(subtype);
             modDataDictionary = npc.modData;
 
             if (updateToFallback)
@@ -290,7 +290,7 @@ namespace RegressionMod
         }
         private string BuildKeyFor(string varName)
         {
-            return BuildKeyFor(varName, modDataBaseKey);
+            return BuildKeyFor(varName, modDataPrefix);
         }
         public static string BuildKeyFor(string varName, string modDataBaseKey)
         {

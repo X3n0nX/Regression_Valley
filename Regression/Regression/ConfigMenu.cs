@@ -54,6 +54,14 @@ namespace RegressionMod
                 getValue: () => config.Messing,
                 setValue: value => config.Messing = value
             );
+            // Show underwear without pants
+            configMenu.AddBoolOption(
+                mod: modManifest,
+                name: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Show_Underwear_Without_Pants.Name}}"),
+                tooltip: () => Strings.tryGetI18nText("{{i18n:Config_Menu.Main.Show_Underwear_Without_Pants.Tooltip}}"),
+                getValue: () => config.ShowUnderwearWithoutPants,
+                setValue: value => config.ShowUnderwearWithoutPants = value
+            );
             // Children And Diapers
             configMenu.AddBoolOption(
                 mod: modManifest,

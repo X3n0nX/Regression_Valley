@@ -9,7 +9,7 @@ namespace RegressionMod
     internal class HousingConstants
     {
         public const string ToiletTextureAssetKey = "Regression_Toilets";
-        public const string ToiletTexturePath = "Assets/toilets.png";
+        public const string ToiletTexturePath = "Assets/Housing/toilets.png";
         public static readonly (string Id, string DisplayName, int SpriteIndex)[] ToiletVariants = new[]
         {
             // Each color variant occupies a 3x4 block; use the full 1x2 toilet sprite.
