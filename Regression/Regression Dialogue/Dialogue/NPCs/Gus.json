@@ -6,11 +6,11 @@
 			"Target":"Characters/Dialogue/Gus",
       "Entries": {
 
-        "Saloon4": "{{i18n:Gus.Dialogue.Saloon4}}}",
-        "Saloon8": "{{i18n:Gus.Dialogue.Saloon8}}}",
+        "Saloon4": "{{i18n:Gus.Dialogue.Saloon4}}",
+        "Saloon8": "{{i18n:Gus.Dialogue.Saloon8}}",
 
-        "Mon2": "{{i18n:Gus.Dialogue.Mon2}}}",
-        "Sat4": "{{i18n:Gus.Dialogue.Sat4}}}",
+        "Mon2": "{{i18n:Gus.Dialogue.Mon2}}",
+        "Sat4": "{{i18n:Gus.Dialogue.Sat4}}",
 
         "Diaper_Change_Accept": "$GET_CHANGE_PLAYER_ACCEPT_DIALOG$ \"gus\"",
         "Diaper_Change_Refuse": "$GET_CHANGE_PLAYER_REFUSE_DIALOG$ \"gus\"",

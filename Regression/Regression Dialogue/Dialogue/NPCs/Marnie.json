@@ -1,0 +1,13 @@
+{
+  "Changes": [
+    {
+      "LogName": "Marnie",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Marnie",
+      "Entries": {
+
+        "Wed4": "{{i18n:Marnie.Dialogue.Wed4}}"
+      }
+    }
+  ]
+}

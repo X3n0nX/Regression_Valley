@@ -29,17 +29,17 @@
   //########################################
 
   "Sam.Dialogue.Job_Pretext": "Ich kann es kaum glauben das ich eine Job habe...$2",
-  "Sam.Dialogue.Job_Question": "Ich habe das Gef�hl, das ich noch gar nicht alt genug daf�r bin.",
-  "Sam.Dialogue.Job_Response1": "Du brauchst einfach ein wenig Zeit, bist du bereit daf�r bist.",
-  "Sam.Dialogue.Job_Response2": "Du k�nntest jederzeit damit aufh�ren, so zu tun, als w�rsr du ein gro�er Junge",
+  "Sam.Dialogue.Job_Question": "Ich habe das Gefühl, das ich noch gar nicht alt genug dafür bin.",
+  "Sam.Dialogue.Job_Response1": "Du brauchst einfach ein wenig Zeit, bist du bereit dafür bist.",
+  "Sam.Dialogue.Job_Response2": "Du könntest jederzeit damit aufh�ren, so zu tun, als wärst du ein großer Junge",
 
-  "Sam.Dialogue.Job_Ready": "Ja, ich wei�, das k�nnte ich. Aber ich bin doch f�r meine Mami verantwortlich...$9#$b#Ich meine Mom...$8",
-  "Sam.Dialogue.Job_Pretend": "Mann, ich w�nschte. Ich k�nnte den ganzen Tag einfach nur spielen. So wie Vincent.$4#$b#Er muss nicht zur Arbeit gehen.$5",
+  "Sam.Dialogue.Job_Ready": "Ja, ich weiß, das k�nnte ich. Aber ich bin doch f�r meine Mami verantwortlich...$9#$b#Ich meine Mom...$8",
+  "Sam.Dialogue.Job_Pretend": "Mann, ich wünschte. Ich könnte den ganzen Tag einfach nur spielen. So wie Vincent.$4#$b#Er muss nicht zur Arbeit gehen.$5",
   "Sam.Dialogue.Job_Followup": "Es hat sich gut angef�hlt zuzugeben, das ich noch nicht bereit daf�r bin. Danke.$3|Ich frage mich, ob ich einfach mal eine Tag blau machen soll und einfach den ganzen Tag im Wald spielen sollte!$1",
 
   "Sam.Dialogue.Diaper_Pretext": "Kann ich dir ein Geheimnis anvertrauen?$7",
-  "Sam.Dialogue.Diaper_Question": "Ich habe das noch niemanden erz�hlt, aber ich m�chte wirklich gerne wieder Windeln tragen.",
-  "Sam.Dialogue.Diaper_Response1": "Od, du bist so ein kleine s��er Junge.",
+  "Sam.Dialogue.Diaper_Question": "Ich habe das noch niemanden erzählt, aber ich m�chte wirklich gerne wieder Windeln tragen.",
+  "Sam.Dialogue.Diaper_Response1": "Od, du bist so ein kleine süßer Junge.",
   "Sam.Dialogue.Diaper_Response2": "Wirklich?! Ich auch!",
 
   "Sam.Dialogue.Diaper_Nice": "W-Wirklich?!$10%Sam ist so �berw�ltige, das er ein wenig anf�ngt zu weinen. Du nimmst ihn in den Arm und reibst ihm �ber den R�cken bis er sich wieder beruhigt hat.#$e#D-Danke @.$4%Sam sieht so aus, als w�re ihm eine gro�e Last von seinen Schultern genommen worden.",
@@ -47,10 +47,10 @@
   "Sam.Dialogue.Diaper_Followup": "Ich habe, bis ich ein Teenager war ins Bett gemacht.$9#$b#Es war mir peinlich, das ich so lange f�r die Nacht Windeln brauchte! Aber jetzt, vermisse ich sie.$4#$b#Isn't that funny?$10",
 
   "Sam.Dialogue.Little_Pretext": "Es ist wundevoll dich kennen zu lernen @. Ich habe das Gef�hl, ich kann ganz ehrlich zu dir sein.",
-  "Sam.Dialogue.Little_Question": "Ich m�chte kein go�es Kind sein. Ich will viellieber wieder ein kleiner Junge sein.",
+  "Sam.Dialogue.Little_Question": "Ich möchte kein goßes Kind sein. Ich will viellieber wieder ein kleiner Junge sein.",
   "Sam.Dialogue.Little_Response1": "Oh, Sam. Du BIST doch noch ein kleiner Junge!",
   "Sam.Dialogue.Little_Response2": "Sieht so aus, als br�uchte ich noch mehr Windeln f�r den kleinen Jungen.",
-  "Sam.Dialogue.Little_Response3": "Ja, gro� zu sein ist schlimm. Wir sollten einfach zusammen spielen!",
+  "Sam.Dialogue.Little_Response3": "Ja, groß zu sein ist schlimm. Wir sollten einfach zusammen spielen!",
   "Sam.Dialogue.Little_Response4": "Ich wechsle deine Windel, wenn du meine wechselst.",
 
   "Sam.Dialogue.Little_Little": "Uh huh!$3#$b#%Sam quietscht vor Freude und versteckt sein knall rotes Gesicht",

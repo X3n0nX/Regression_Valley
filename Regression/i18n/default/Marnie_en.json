@@ -1,5 +1,45 @@
 {
   // ########################################
+  // Villager Reactions
+  // ########################################
+
+  // You Pee/Poop in your underwear near Marnie, friendship very nice
+
+  "Villager_Reactions.Marnie.Soiled.Verynice.1": "Ooh... we might just have someone to rival my cows!$1",
+  "Villager_Reactions.Marnie.Soiled.Verynice.2": "You know, if you want I could give you a change...$0",
+  "Villager_Reactions.Marnie.Soiled.Verynice.3": "Little farmer couldn't make it, huh?$1",
+  "Villager_Reactions.Marnie.Soiled.Verynice.4": "Hey $FARMERNAME$!$0#$b#%You turn around to see Marnie approaching with a smile. She pats your hair.#$b#Making some manure for your plants, big <boy/girl>?$1",
+  "Villager_Reactions.Marnie.Soiled.Verynice.5": "%Marnie hugs you after you are done <wetting your pants&making a mess> and lifts you up into the air.#$b#Oh, your potty face is just so cute...$1",
+  "Villager_Reactions.Marnie.Soiled.Verynice.6": "Aww... the little farmer just went potty in their pants!$1",
+
+  // You Pee/Poop in your underwear near Marnie, friendship nice
+
+  "Villager_Reactions.Marnie.Soiled.Nice.1": "You know, you sometimes remind me of Jas some years back..",
+  "Villager_Reactions.Marnie.Soiled.Nice.2": "%Marnie has a smile on her face and quietly laughs to herself.",
+  "Villager_Reactions.Marnie.Soiled.Nice.3": "I... think I could spare you a pull-up, if you've got nothing to change into.$0#$b#Doubt it would last long, but you know.#$b#%She smiles.$1",
+
+  // You Pee/Poop in your underwear near Marnie, friendship mean
+
+  "Villager_Reactions.Marnie.Soiled.Mean.1": "...Look, can you not do that near me?$2",
+  "Villager_Reactions.Marnie.Soiled.Mean.2": "You better not leak inside my house.$2",
+  "Villager_Reactions.Marnie.Soiled.Mean.3": "Was that on purpose?$2",
+
+  // You check Marnie's underwear, friendship very nice
+
+  "Villager_Reactions.Marnie.Check.Npc.Verynice.1": "Oh? You want to check my diaper?$0#$b#Don't be silly, you're the baby here.$1",
+
+  // You check Marnie's underwear, friendship nice
+
+  "Villager_Reactions.Marnie.Check.Npc.Nice.1": "%You imagine Marnie wearing a thick diaper and it makes you giggle.",
+  "Villager_Reactions.Marnie.Check.Npc.Nice.2": "%You imagine Marnie making a mess in her diaper while tending to her shop. You find it sooo cute...",
+  "Villager_Reactions.Marnie.Check.Npc.Nice.3": "%You directly ask Marnie if she wears diapers.#$b#Only babies wear them, honey. That's why you do!$1",
+
+  // You check Marnie's underwear, friendship mean
+
+  "Villager_Reactions.Marnie.Check.Npc.Mean.1": "%You try to see if maybe Marnie's wearing a diaper under her clothes. She turns around and shakes her finger at you.#$b#No diapers here, <mister/missy>.$2",
+  "Villager_Reactions.Marnie.Check.Npc.Mean.2": "%You try to see if maybe Marnie's wearing a diaper under her clothes. She notices you looking at her lower body a bit too much...#$b#My eyes are up here, <mister/missy>.$2",
+
+  // ########################################
   // Villager Gift Dialoges
   // ########################################
 
